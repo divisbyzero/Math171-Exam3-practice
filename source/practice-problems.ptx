@@ -157,7 +157,8 @@
         <p>
           We have <m>f(1,1)=\sqrt{1+3}=2</m>. The partial derivatives are
           <md>
-            <mrow>f_x(x,y) \amp = \frac{x}{\sqrt{x^2+3y}}, \amp f_y(x,y) \amp = \frac{3}{2\sqrt{x^2+3y}}</mrow>
+            <mrow>f_x(x,y) \amp = \frac{x}{\sqrt{x^2+3y}}</mrow>
+            <mrow>f_y(x,y) \amp = \frac{3}{2\sqrt{x^2+3y}}</mrow>
           </md>,
           so <m>f_x(1,1)=\frac{1}{2}</m> and <m>f_y(1,1)=\frac{3}{4}</m>.
           A normal vector to the tangent plane is
@@ -347,46 +348,62 @@
   </exercise>
 
 
-  <exercise xml:id="ex-classify-critical-points">
-    <introduction>
+  <exercise xml:id="ex-classify-critical-points" workspace="3in">
+    <statement>
       <p>
-        Find the local maximum and minimum values and saddle point(s) of each
-        function.
+        Find the locations of any local maxima, local minima, and saddle points of
+        <m>f(x,y)=x^3+y^3-3xy</m>.
       </p>
-    </introduction>
-
-    <task workspace="1.5in">
-      <statement>
-        <p>
-          <m>f(x,y)=x^3+y^3-3xy</m>
-        </p>
-      </statement>
-    </task>
-
-    <task workspace="1.5in">
-      <statement>
-        <p>
-          <m>f(x,y)=2x^3+6xy+3y^2</m>
-        </p>
-      </statement>
-    </task>
-
-    <task workspace="1.5in">
-      <statement>
-        <p>
-          <m>f(x,y)=x^4+y^4-4xy+1</m>
-        </p>
-      </statement>
-    </task>
-
-    <task workspace="1.5in">
-      <statement>
-        <p>
-          <m>f(x,y)=xy-x^2y-xy^2</m>
-        </p>
-      </statement>
-    </task>
+    </statement>
+    <solution>
+      <p>
+        The first partial derivatives are
+        <md>
+          <mrow>f_x(x,y) \amp = 3x^2-3y</mrow>
+          <mrow>f_y(x,y) \amp = 3y^2-3x</mrow>
+        </md>.
+        Setting <m>f_x(x,y)=0</m> gives <m>y=x^2</m>. Substituting into <m>f_y(x,y)=0</m> gives
+        <md>
+          x^4-x = x(x^3-1) = 0
+        </md>,
+        so <m>x=0</m> or <m>x=1</m>. The critical points are <m>(0,0)</m> and <m>(1,1)</m>.
+      </p>
+      <p>
+        The second partial derivatives are
+        <md>
+          <mrow>f_{xx}(x,y) \amp = 6x</mrow>
+          <mrow>f_{xy}(x,y) \amp = -3</mrow>
+          <mrow>f_{yy}(x,y) \amp = 6y</mrow>
+        </md>,
+        so
+        <md>
+          <mrow>D(x,y) \amp = (6x)(6y)-(-3)^2</mrow>
+          <mrow>\amp = 36xy-9</mrow>
+        </md>.
+      </p>
+      <ul>
+        <li>
+          <p>
+            <m>D(0,0)=36(0)(0)-9=-9\lt 0</m>, so <m>(0,0)</m> is a saddle point.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>D(1,1)=36(1)(1)-9=27\gt 0</m> and <m>f_{xx}(1,1)=6\gt 0</m>, so <m>(1,1)</m> is a local minimum.
+          </p>
+        </li>
+      </ul>
+      <p>
+        There are no local maxima.
+      </p>
+    </solution>
   </exercise>
+
+  <!-- Alternative functions for the problem above (swap one into the statement if desired):
+         f(x,y) = 2x^3 + 6xy + 3y^2         critical points (0,0) saddle; (1,-1) local min, f = -1
+         f(x,y) = x^4 + y^4 - 4xy + 1       critical points (0,0) saddle; (1,1), (-1,-1) local min, f = -1
+         f(x,y) = xy - x^2 y - x y^2        critical points (0,0), (1,0), (0,1) saddles; (1/3,1/3) local max, f = 1/27
+  -->
 
   <exercise xml:id="ex-second-derivative-test">
     <introduction>
@@ -544,7 +561,8 @@
         </md>.
         Using the quotient rule and simplifying,
         <md>
-          <mrow>V_x \amp = \frac{y^2(12-2xy-x^2)}{2(x+y)^2}, \amp V_y \amp = \frac{x^2(12-2xy-y^2)}{2(x+y)^2}</mrow>
+          <mrow>V_x(x,y) \amp = \frac{y^2(12-2xy-x^2)}{2(x+y)^2}</mrow>
+          <mrow>V_y(x,y) \amp = \frac{x^2(12-2xy-y^2)}{2(x+y)^2}</mrow>
         </md>.
       </p>
       <p>
@@ -570,8 +588,19 @@
         <md>
           g(x,y)=x^2+y^2+xy+1
         </md>.
-        Setting <m>g_x=2x+y=0</m> and <m>g_y=x+2y=0</m> gives the single critical point <m>(0,0)</m>.
-        Here <m>g_{xx}=2</m>, <m>g_{xy}=1</m>, and <m>g_{yy}=2</m>, so <m>D=2\cdot 2-1^2=3\gt 0</m> and <m>g_{xx}\gt 0</m>. This makes <m>(0,0)</m> a local minimum.
+        The first partial derivatives are
+        <md>
+          <mrow>g_x(x,y) \amp = 2x+y</mrow>
+          <mrow>g_y(x,y) \amp = x+2y</mrow>
+        </md>.
+        Setting both equal to zero gives the single critical point <m>(0,0)</m>.
+        The second partial derivatives are
+        <md>
+          <mrow>g_{xx}(x,y) \amp = 2</mrow>
+          <mrow>g_{xy}(x,y) \amp = 1</mrow>
+          <mrow>g_{yy}(x,y) \amp = 2</mrow>
+        </md>,
+        so <m>D(0,0)=(2)(2)-(1)^2=3\gt 0</m> and <m>g_{xx}(0,0)=2\gt 0</m>. This makes <m>(0,0)</m> a local minimum.
       </p>
       <p>
         It is in fact the absolute minimum, since

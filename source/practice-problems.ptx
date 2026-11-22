@@ -255,41 +255,7 @@
 
   </exercise>
 
-  <exercise xml:id="ex-normal-to-curve">
-    <introduction>
-      <p>
-        Consider the curve <m>x^2-y^2=5</m> in the <m>xy</m>-plane.
-      </p>
-    </introduction>
 
-    <task workspace="1.5in">
-      <statement>
-        <p>
-          Use the gradient to find a vector normal to the curve at the point
-          <m>(3,2)</m>.
-        </p>
-      </statement>
-    </task>
-
-    <task workspace="1.5in">
-      <statement>
-        <p>
-          Find an equation of the tangent line to the curve at <m>(3,2)</m>.
-        </p>
-      </statement>
-    </task>
-
-    <task workspace="1.5in">
-      <statement>
-        <p>
-          Sketch the curve, the tangent line, and the normal vector.
-        </p>
-      </statement>
-    </task>
-  </exercise>
-  <!-- ============================================== -->
-  <!-- 5.10 Relative Extrema                          -->
-  <!-- ============================================== -->
   <exercise xml:id="ex-classify-critical-points">
     <introduction>
       <p>
@@ -340,36 +306,108 @@
       </p>
     </introduction>
 
-    <task workspace="1.5in">
+    <task label="sdt-a">
       <statement>
         <p>
           <m>f_{xx}(1,2)=4, \quad f_{xy}(1,2)=3, \quad f_{yy}(1,2)=5</m>
         </p>
       </statement>
+      <choices randomize="no">
+          <choice>
+            <statement><p>Local maximum</p></statement>
+            <feedback><p>Not quite. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
+          </choice>
+          <choice correct="yes">
+            <statement><p>Local minimum</p></statement>
+            <feedback><p>Correct. <m>D=f_{xx}f_{yy}-f_{xy}^2=20-9=11\gt 0</m> and <m>f_{xx}(1,2)=4\gt 0</m>, so <m>f</m> has a local minimum at <m>(1,2)</m>.</p></feedback>
+          </choice>
+          <choice>
+            <statement><p>Saddle point</p></statement>
+            <feedback><p>Not quite. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
+          </choice>
+          <choice>
+            <statement><p>The test is inconclusive</p></statement>
+            <feedback><p>Not quite. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
+          </choice>
+      </choices>
     </task>
 
-    <task workspace="1.5in">
+    <task label="sdt-b">
       <statement>
         <p>
           <m>f_{xx}(1,2)=4, \quad f_{xy}(1,2)=6, \quad f_{yy}(1,2)=5</m>
         </p>
       </statement>
+      <choices randomize="no">
+          <choice>
+            <statement><p>Local maximum</p></statement>
+            <feedback><p>Not quite. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
+          </choice>
+          <choice>
+            <statement><p>Local minimum</p></statement>
+            <feedback><p>Not quite. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
+          </choice>
+          <choice correct="yes">
+            <statement><p>Saddle point</p></statement>
+            <feedback><p>Correct. <m>D=f_{xx}f_{yy}-f_{xy}^2=20-36=-16\lt 0</m>, so <m>f</m> has a saddle point at <m>(1,2)</m>.</p></feedback>
+          </choice>
+          <choice>
+            <statement><p>The test is inconclusive</p></statement>
+            <feedback><p>Not quite. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
+          </choice>
+      </choices>
     </task>
 
-    <task workspace="1.5in">
+    <task label="sdt-c">
       <statement>
         <p>
           <m>f_{xx}(1,2)=-2, \quad f_{xy}(1,2)=1, \quad f_{yy}(1,2)=-3</m>
         </p>
       </statement>
+      <choices randomize="no">
+          <choice correct="yes">
+            <statement><p>Local maximum</p></statement>
+            <feedback><p>Correct. <m>D=f_{xx}f_{yy}-f_{xy}^2=6-1=5\gt 0</m> and <m>f_{xx}(1,2)=-2\lt 0</m>, so <m>f</m> has a local maximum at <m>(1,2)</m>.</p></feedback>
+          </choice>
+          <choice>
+            <statement><p>Local minimum</p></statement>
+            <feedback><p>Not quite. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
+          </choice>
+          <choice>
+            <statement><p>Saddle point</p></statement>
+            <feedback><p>Not quite. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
+          </choice>
+          <choice>
+            <statement><p>The test is inconclusive</p></statement>
+            <feedback><p>Not quite. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
+          </choice>
+      </choices>
     </task>
 
-    <task workspace="1.5in">
+    <task label="sdt-d">
       <statement>
         <p>
           <m>f_{xx}(1,2)=2, \quad f_{xy}(1,2)=4, \quad f_{yy}(1,2)=8</m>
         </p>
       </statement>
+      <choices randomize="no">
+          <choice>
+            <statement><p>Local maximum</p></statement>
+            <feedback><p>Not quite. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
+          </choice>
+          <choice>
+            <statement><p>Local minimum</p></statement>
+            <feedback><p>Not quite. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
+          </choice>
+          <choice>
+            <statement><p>Saddle point</p></statement>
+            <feedback><p>Not quite. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
+          </choice>
+          <choice correct="yes">
+            <statement><p>The test is inconclusive</p></statement>
+            <feedback><p>Correct. <m>D=f_{xx}f_{yy}-f_{xy}^2=16-16=0</m>, so the Second Derivatives Test gives no information.</p></feedback>
+          </choice>
+      </choices>
     </task>
   </exercise>
 
@@ -421,80 +459,118 @@
     <introduction>
       <p>
         Determine whether each statement is true or false.
-        If it is true, explain why.
-        If it is false, explain why or give a counterexample.
       </p>
     </introduction>
 
-    <task workspace="1.5in">
-      <statement>
+    <task label="tf-a">
+      <statement correct="no">
         <p>
           If <m>f(x,y)\to L</m> as <m>(x,y)\to(0,0)</m> along the lines <m>x=0</m> and <m>y=0</m>, then <md>\lim_{(x,y)\to(0,0)}f(x,y)=L</md>.
         </p>
       </statement>
+      <feedback>
+        <p>
+          False. Checking two paths is not enough. For <m>f(x,y)=\frac{xy}{x^2+y^2}</m>, the limit along both axes is <m>0</m>, but along <m>y=x</m> the limit is <m>\tfrac12</m>, so the limit does not exist.
+        </p>
+      </feedback>
     </task>
 
-    <task workspace="1.5in">
-      <statement>
+    <task label="tf-b">
+      <statement correct="no">
         <p>
           <m>D_{\bvec{u}}f(a,b)</m> is a vector.
         </p>
       </statement>
+      <feedback>
+        <p>
+          False. <m>D_{\bvec{u}}f(a,b)=\grad f(a,b)\cdot\bvec{u}</m> is a dot product, so it is a scalar (a rate of change), not a vector.
+        </p>
+      </feedback>
     </task>
 
-    <task workspace="1.5in">
-      <statement>
+    <task label="tf-c">
+      <statement correct="yes">
         <p>
           <m>\grad f(a,b)</m> is orthogonal to the level curve of <m>f</m>
           through <m>(a,b)</m>.
         </p>
       </statement>
+      <feedback>
+        <p>
+          True. If <m>\bvec{r}(t)</m> parametrizes the level curve <m>f(x,y)=k</m>, differentiating <m>f(\bvec{r}(t))=k</m> gives <m>\grad f\cdot\bvec{r}\,'(t)=0</m>, so the gradient is orthogonal to the curve (when <m>\grad f(a,b)\neq\bvec{0}</m>).
+        </p>
+      </feedback>
     </task>
 
-    <task workspace="1.5in">
-      <statement>
+    <task label="tf-d">
+      <statement correct="yes">
         <p>
           The maximum value of <m>D_{\bvec{u}}f(a,b)</m> over all unit vectors
           <m>\bvec{u}</m> is <m>|\grad f(a,b)|</m>.
         </p>
       </statement>
+      <feedback>
+        <p>
+          True. <m>D_{\bvec{u}}f(a,b)=|\grad f(a,b)|\cos\theta</m>, which is largest when <m>\theta=0</m>, that is, when <m>\bvec{u}</m> points in the direction of <m>\grad f(a,b)</m>.
+        </p>
+      </feedback>
     </task>
 
-    <task workspace="1.5in">
-      <statement>
+    <task label="tf-e">
+      <statement correct="yes">
         <p>
           For any unit vector <m>\bvec{u}</m>,
           <m>D_{-\bvec{u}}f(a,b)=-D_{\bvec{u}}f(a,b)</m>.
         </p>
       </statement>
+      <feedback>
+        <p>
+          True. <m>D_{-\bvec{u}}f(a,b)=\grad f(a,b)\cdot(-\bvec{u})=-\grad f(a,b)\cdot\bvec{u}=-D_{\bvec{u}}f(a,b)</m>.
+        </p>
+      </feedback>
     </task>
 
-    <task workspace="1.5in">
-      <statement>
+    <task label="tf-f">
+      <statement correct="no">
         <p>
           If <m>\grad f(a,b)=\bvec{0}</m>, then <m>f</m> has a local maximum or
           a local minimum at <m>(a,b)</m>.
         </p>
       </statement>
+      <feedback>
+        <p>
+          False. A critical point can be a saddle point. For <m>f(x,y)=x^2-y^2</m>, <m>\grad f(0,0)=\bvec{0}</m>, but <m>(0,0)</m> is a saddle point.
+        </p>
+      </feedback>
     </task>
 
-    <task workspace="1.5in">
-      <statement>
+    <task label="tf-g">
+      <statement correct="no">
         <p>
           If <m>(a,b)</m> is a critical point of <m>f</m>,
           <m>f_{xx}(a,b)&gt;0</m>, and <m>f_{yy}(a,b)&gt;0</m>, then <m>f</m>
           has a local minimum at <m>(a,b)</m>.
         </p>
       </statement>
+      <feedback>
+        <p>
+          False. The test also requires <m>D=f_{xx}f_{yy}-f_{xy}^2&gt;0</m>. For <m>f(x,y)=x^2+4xy+y^2</m>, <m>f_{xx}=f_{yy}=2&gt;0</m>, but <m>D=4-16&lt;0</m>, so <m>(0,0)</m> is a saddle point.
+        </p>
+      </feedback>
     </task>
 
-    <task workspace="1.5in">
-      <statement>
+    <task label="tf-h">
+      <statement correct="yes">
         <p>
           If <m>f</m> is differentiable and has a local maximum at <m>(a,b)</m>,
           then <m>\grad f(a,b)=\bvec{0}</m>.
         </p>
       </statement>
+      <feedback>
+        <p>
+          True. If <m>f</m> has a local maximum at <m>(a,b)</m>, then <m>g(x)=f(x,b)</m> and <m>h(y)=f(a,y)</m> have local maxima at <m>a</m> and <m>b</m>, so <m>f_x(a,b)=f_y(a,b)=0</m>.
+        </p>
+      </feedback>
     </task>
   </exercise>
 </worksheet>

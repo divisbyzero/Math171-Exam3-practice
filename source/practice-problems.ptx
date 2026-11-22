@@ -12,6 +12,23 @@
         </md>.
       </p>
     </statement>
+    <solution>
+      <p>
+        Along the <m>x</m>-axis (<m>y=0</m>), the function is
+        <m>\frac{0}{2x^4}=0</m> for <m>x\neq 0</m>, so the limit along this path is <m>0</m>.
+      </p>
+      <p>
+        Along the line <m>y=x</m>, the function is
+        <md>
+          <mrow>\frac{3x\cdot x}{2x^4+5x^2} \amp = \frac{3x^2}{x^2(2x^2+5)}</mrow>
+          <mrow>\amp = \frac{3}{2x^2+5}</mrow>
+        </md>,
+        which approaches <m>\frac{3}{5}</m> as <m>x\to 0</m>.
+      </p>
+      <p>
+        Since the function approaches different values along two different paths to <m>(0,0)</m>, the limit does not exist.
+      </p>
+    </solution>
   </exercise>
 
   <exercise xml:id="ex-clairaut">
@@ -138,6 +155,18 @@
           the point <m>(1,1)</m>.
         </p>
       </statement>
+      <solution>
+        <p>
+          We have <m>f(1,1)=\sqrt{1+3}=2</m>. The partial derivatives are
+          <md>
+            <mrow>f_x(x,y) \amp = \frac{x}{\sqrt{x^2+3y}}, \amp f_y(x,y) \amp = \frac{3}{2\sqrt{x^2+3y}}</mrow>
+          </md>,
+          so <m>f_x(1,1)=\frac{1}{2}</m> and <m>f_y(1,1)=\frac{3}{4}</m>. The tangent plane is
+          <md>
+            z = 2+\tfrac{1}{2}(x-1)+\tfrac{3}{4}(y-1)
+          </md>.
+        </p>
+      </solution>
     </task>
 
     <task workspace="1.5in">
@@ -147,14 +176,32 @@
           <m>(1,1)</m>.
         </p>
       </statement>
+      <solution>
+        <p>
+          The linearization is the function whose graph is the tangent plane:
+          <md>
+            L(x,y)=2+\tfrac{1}{2}(x-1)+\tfrac{3}{4}(y-1)
+          </md>.
+        </p>
+      </solution>
     </task>
 
     <task workspace="1.5in">
       <statement>
         <p>
-          Use your answer to part (a) to approximate <m>f(1.04,\,0.92)</m>.
+          Use your answer to part (b) to approximate <m>f(1.04,\,0.96)</m>. Then use a calculator to find the actual value, and compare.
         </p>
       </statement>
+      <solution>
+        <p>
+          <md>
+            <mrow>f(1.04,\,0.96) \approx L(1.04,\,0.96) \amp = 2+\tfrac{1}{2}(0.04)+\tfrac{3}{4}(-0.04)</mrow>
+            <mrow>\amp = 2+0.02-0.03</mrow>
+            <mrow>\amp = 1.99</mrow>
+          </md>.
+          The actual value is <m>f(1.04,\,0.96)=\sqrt{3.9616}\approx 1.9904</m>, so the approximation is off by only about <m>0.0004</m>.
+        </p>
+      </solution>
     </task>
   </exercise>
 
@@ -176,6 +223,18 @@
           At what rate?
         </p>
       </statement>
+      <solution>
+        <p>
+          The gradient is <m>\grad h=\langle -0.02x,\,-0.04y\rangle</m>, so
+          <m>\grad h(60,20)=\langle -1.2,\,-0.8\rangle</m>.
+          Northeast is the direction of the unit vector <m>\bvec{u}=\frac{1}{\sqrt{2}}\langle 1,1\rangle</m>, so
+          <md>
+            <mrow>D_{\bvec{u}}h(60,20) \amp = \langle -1.2,\,-0.8\rangle\cdot\tfrac{1}{\sqrt{2}}\langle 1,1\rangle</mrow>
+            <mrow>\amp = -\tfrac{2}{\sqrt{2}} = -\sqrt{2}\approx -1.41</mrow>
+          </md>.
+          Since this is negative, you are descending, at a rate of <m>\sqrt{2}\approx 1.41</m> meters of elevation per meter walked.
+        </p>
+      </solution>
     </task>
 
     <task workspace="1.5in">
@@ -185,6 +244,16 @@
           What is the slope in that direction?
         </p>
       </statement>
+      <solution>
+        <p>
+          You climb most steeply in the direction of <m>\grad h(60,20)=\langle -1.2,\,-0.8\rangle</m>, which points in the same direction as
+          <m>\langle -3,-2\rangle</m> (southwest, but more west than south). The unit vector in this direction is
+          <m>\frac{1}{\sqrt{13}}\langle -3,-2\rangle</m>. The slope in this direction is
+          <md>
+            |\grad h(60,20)|=\sqrt{(-1.2)^2+(-0.8)^2}=\sqrt{2.08}=\tfrac{2\sqrt{13}}{5}\approx 1.44
+          </md>.
+        </p>
+      </solution>
     </task>
 
     <task workspace="1.5in">
@@ -193,6 +262,15 @@
           In what direction(s) should you walk to stay at the same elevation?
         </p>
       </statement>
+      <solution>
+        <p>
+          To stay at the same elevation, walk in a direction <m>\bvec{u}</m> with <m>D_{\bvec{u}}h(60,20)=\grad h(60,20)\cdot\bvec{u}=0</m>, that is, perpendicular to <m>\langle -3,-2\rangle</m>.
+          The two such unit vectors are
+          <md>
+            \bvec{u}=\tfrac{1}{\sqrt{13}}\langle 2,-3\rangle \quad\text{and}\quad \bvec{u}=\tfrac{1}{\sqrt{13}}\langle -2,3\rangle
+          </md>.
+        </p>
+      </solution>
     </task>
   </exercise>
 
@@ -252,6 +330,19 @@
         Find an equation of the tangent plane to the surface <m>yz=\ln(x+z)</m> at the point <m>(0,0,1)</m>.
       </p>
     </statement>
+    <solution>
+      <p>
+        Write the surface as a level surface <m>F(x,y,z)=0</m>, where <m>F(x,y,z)=yz-\ln(x+z)</m>. Then
+        <md>
+          <mrow>F_x \amp = -\frac{1}{x+z}, \amp F_y \amp = z, \amp F_z \amp = y-\frac{1}{x+z}</mrow>
+        </md>,
+        so <m>\grad F(0,0,1)=\langle -1,\,1,\,-1\rangle</m>. This vector is normal to the surface at <m>(0,0,1)</m>, so the tangent plane is
+        <md>
+          -(x-0)+(y-0)-(z-1)=0
+        </md>,
+        or equivalently <m>x-y+z=1</m>.
+      </p>
+    </solution>
 
   </exercise>
 
@@ -444,6 +535,26 @@
         Find the maximum volume of such a box.
       </p>
     </statement>
+    <solution>
+      <p>
+        Let the base be <m>x</m> by <m>y</m> and the height be <m>z</m> (all in meters). With no lid, the amount of cardboard is
+        <m>xy+2xz+2yz=12</m>, so <m>z=\frac{12-xy}{2(x+y)}</m>. The volume is
+        <md>
+          V(x,y)=xyz=\frac{12xy-x^2y^2}{2(x+y)}
+        </md>.
+        Using the quotient rule and simplifying,
+        <md>
+          <mrow>V_x \amp = \frac{y^2(12-2xy-x^2)}{2(x+y)^2}, \amp V_y \amp = \frac{x^2(12-2xy-y^2)}{2(x+y)^2}</mrow>
+        </md>.
+      </p>
+      <p>
+        Since <m>x,y\gt 0</m>, setting both equal to zero gives <m>12-2xy-x^2=0</m> and <m>12-2xy-y^2=0</m>. Subtracting, <m>x^2=y^2</m>, so <m>x=y</m>. Then <m>3x^2=12</m>, so <m>x=y=2</m> and <m>z=\frac{12-4}{8}=1</m>.
+      </p>
+      <p>
+        The volume tends to <m>0</m> at the edges of the allowed region (as <m>x</m> or <m>y</m> approaches <m>0</m>, or <m>xy</m> approaches <m>12</m>), so this single critical point gives the maximum. The maximum volume is
+        <m>V=2\cdot 2\cdot 1=4\text{ m}^3</m>.
+      </p>
+    </solution>
   </exercise>
 
   <exercise xml:id="ex-closest-points" workspace="3in">
@@ -453,6 +564,21 @@
         origin.
       </p>
     </statement>
+    <solution>
+      <p>
+        It is enough to minimize the square of the distance, <m>d^2=x^2+y^2+z^2</m>. On the surface, <m>z^2=xy+1</m>, so we minimize
+        <md>
+          g(x,y)=x^2+y^2+xy+1
+        </md>.
+        Setting <m>g_x=2x+y=0</m> and <m>g_y=x+2y=0</m> gives the single critical point <m>(0,0)</m>.
+        Here <m>g_{xx}=2</m>, <m>g_{xy}=1</m>, and <m>g_{yy}=2</m>, so <m>D=2\cdot 2-1^2=3\gt 0</m> and <m>g_{xx}\gt 0</m>. This makes <m>(0,0)</m> a local minimum.
+      </p>
+      <p>
+        It is in fact the absolute minimum, since
+        <m>x^2+xy+y^2=\left(x+\tfrac{y}{2}\right)^2+\tfrac{3}{4}y^2\ge 0</m>, so <m>g(x,y)\ge 1=g(0,0)</m> for all <m>(x,y)</m>.
+        When <m>x=y=0</m>, <m>z^2=1</m>, so <m>z=\pm 1</m>. The closest points are <m>(0,0,1)</m> and <m>(0,0,-1)</m>, each at distance <m>1</m> from the origin.
+      </p>
+    </solution>
   </exercise>
 
   <exercise xml:id="ex-true-false">

@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<worksheet xml:id="practice-problems" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Practice Problems</title>
+
+  <!-- ============================================== -->
+  <!-- 5.3 Limits                                     -->
+  <!-- ============================================== -->
+
+  <exercise xml:id="ex-limit-dne" workspace="3in">
+    <statement>
+      <p>
+        Show that the following limit does not exist
+        <md>\lim_{(x,y)\to(0,0)}\frac{3xy}{2x^4+5y^2}</md>.
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================== -->
+  <!-- 5.5 Partial Derivatives                        -->
+  <!-- ============================================== -->
+
+  <exercise xml:id="ex-clairaut">
+    <statement>
+      <p>
+        Let
+        <md>f(x,y)=x\,e^{xy}+\frac{x}{1+y^2}</md>.
+        Compute the mixed partial derivatives <m>f_{xy}</m> and <m>f_{yx}</m>, and verify that <m>f_{xy}=f_{yx}</m>, as guaranteed by Clairaut's theorem.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        First compute the first partial derivatives. Using the product rule and chain rule on the first term, and the quotient rule on the second term,
+        <md>
+          f_x(x,y)=(1+xy)\,e^{xy}+\frac{1}{1+y^2},
+          \qquad
+          f_y(x,y)=x^2e^{xy}-\frac{2xy}{(1+y^2)^2}
+        </md>.
+        Differentiating <m>f_x</m> with respect to <m>y</m> gives
+        <md>
+          f_{xy}(x,y)=x\,e^{xy}+(1+xy)\,x\,e^{xy}-\frac{2y}{(1+y^2)^2}
+          =x(2+xy)\,e^{xy}-\frac{2y}{(1+y^2)^2}
+        </md>.
+        Differentiating <m>f_y</m> with respect to <m>x</m> gives
+        <md>
+          f_{yx}(x,y)=2x\,e^{xy}+x^2y\,e^{xy}-\frac{2y}{(1+y^2)^2}
+          =x(2+xy)\,e^{xy}-\frac{2y}{(1+y^2)^2}
+        </md>.
+        Therefore <m>f_{xy}=f_{yx}</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="ex-contour-partials">
+    <introduction>
+      <p>
+        A contour map of a function <m>f</m> is shown below, with the points <m>P</m> and <m>Q</m> marked.
+      </p>
+      <!-- FIGURE PLACEHOLDER: replace with an <image> (e.g., a <latex-image>) -->
+      <p>
+        <alert>[Figure placeholder]</alert> A contour map of a function <m>f(x,y)</m> (e.g., a hill whose peak is up and to the right), with level curves labeled by their values (e.g., <m>1,2,3,4,5</m>). Point <m>P</m> sits where the level curves increase to the right and are getting closer together; point <m>Q</m> sits where the values decrease as <m>y</m> increases.
+      </p>
+      <p>
+        Determine whether each quantity is positive, negative, or zero. Explain your reasoning.
+      </p>
+    </introduction>
+    <task workspace="1.5in"><statement><p><m>f_x(P)</m></p></statement></task>
+    <task workspace="1.5in"><statement><p><m>f_y(P)</m></p></statement></task>
+    <task workspace="1.5in"><statement><p><m>f_{xx}(P)</m></p></statement></task>
+    <task workspace="1.5in"><statement><p><m>f_x(Q)</m></p></statement></task>
+    <task workspace="1.5in"><statement><p><m>f_y(Q)</m></p></statement></task>
+    <task workspace="1.5in"><statement><p><m>f_{yy}(Q)</m></p></statement></task>
+  </exercise>
+
+  <exercise xml:id="ex-tangent-plane-linearization">
+    <introduction>
+      <p>
+        Let <m>f(x,y)=\sqrt{x^2+3y}</m>.
+      </p>
+    </introduction>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          Find the equation of the tangent plane to the graph <m>z=f(x,y)</m> at the point <m>(1,1)</m>.
+        </p>
+      </statement>
+    </task>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          Find the linearization <m>L(x,y)</m> of <m>f</m> at the point <m>(1,1)</m>.
+        </p>
+      </statement>
+    </task>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          Use your answer to part (a) to approximate <m>f(1.04,\,0.92)</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-directional-derivative">
+    <introduction>
+      <p>
+        Let <m>f(x,y)=\ln(x^2+y^2)</m> and let <m>P=(1,2)</m>.
+      </p>
+    </introduction>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          Find the directional derivative of <m>f</m> at <m>P</m> in the direction of the vector <m>\bvec{v}=\langle 3,4\rangle</m>.
+        </p>
+      </statement>
+    </task>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          Find the maximum rate of change of <m>f</m> at <m>P</m> and the direction in which it occurs.
+        </p>
+      </statement>
+    </task>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          In what direction does <m>f</m> decrease most rapidly at <m>P</m>? What is the rate of change in that direction?
+        </p>
+      </statement>
+    </task>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          Find all unit vectors <m>\bvec{u}</m> for which <m>D_{\bvec{u}}f(1,2)=0</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-hiking">
+    <introduction>
+      <p>
+        You are hiking on a hill whose elevation (in meters) is <m>h(x,y)=1200-0.01x^2-0.02y^2</m>, where <m>x</m> and <m>y</m> are measured in meters, the positive <m>x</m>-axis points east, and the positive <m>y</m>-axis points north. You are standing at the point <m>(60,20)</m>.
+      </p>
+    </introduction>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          If you walk northeast, are you ascending or descending? At what rate?
+        </p>
+      </statement>
+    </task>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          In what direction should you walk to climb most steeply? What is the slope in that direction?
+        </p>
+      </statement>
+    </task>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          In what direction(s) should you walk to stay at the same elevation?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-contour-gradient">
+    <introduction>
+      <p>
+        The contour map below shows level curves of a function <m>f(x,y)</m>. The points <m>A</m>, <m>B</m>, and <m>C</m> and the unit vectors <m>\bvec{u}</m> and <m>\bvec{v}</m> (based at <m>A</m>) are marked on the map.
+      </p>
+      <!-- FIGURE PLACEHOLDER: replace with an <image> (e.g., a <latex-image>) -->
+      <p>
+        <alert>[Figure placeholder]</alert> A contour map of <m>f</m> with labeled level curves (e.g., <m>10,20,\ldots,60</m>), some regions where the curves are close together and others where they are far apart. Points <m>A</m>, <m>B</m>, and <m>C</m> are marked. At <m>A</m>, unit vector <m>\bvec{u}</m> points roughly toward lower values and unit vector <m>\bvec{v}</m> is tangent to the level curve through <m>A</m>.
+      </p>
+    </introduction>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          Sketch <m>\grad f</m> at each of the points <m>A</m>, <m>B</m>, and <m>C</m>. (Only the direction matters.)
+        </p>
+      </statement>
+    </task>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          At which of the three points is <m>|\grad f|</m> the largest? The smallest? Explain.
+        </p>
+      </statement>
+    </task>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          Is <m>D_{\bvec{u}}f(A)</m> positive, negative, or zero? What about <m>D_{\bvec{v}}f(A)</m>?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-tangent-plane-surface">
+    <introduction>
+      <p>
+        Find an equation of the tangent plane to the given surface at the specified point.
+      </p>
+    </introduction>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          <m>x^2+2y^2-z^2=5</m>, <m>\quad(2,1,1)</m>
+        </p>
+      </statement>
+    </task>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          <m>yz=\ln(x+z)</m>, <m>\quad(0,0,1)</m>
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-ellipsoid-parallel-plane" workspace="3in">
+    <statement>
+      <p>
+        Find the points on the ellipsoid <m>x^2+2y^2+3z^2=12</m> at which the tangent plane is parallel to the plane <m>x+4y+3z=0</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-normal-to-curve">
+    <introduction>
+      <p>
+        Consider the curve <m>x^2-y^2=5</m> in the <m>xy</m>-plane.
+      </p>
+    </introduction>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          Use the gradient to find a vector normal to the curve at the point <m>(3,2)</m>.
+        </p>
+      </statement>
+    </task>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          Find an equation of the tangent line to the curve at <m>(3,2)</m>.
+        </p>
+      </statement>
+    </task>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          Sketch the curve, the tangent line, and the normal vector.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <!-- ============================================== -->
+  <!-- 5.10 Relative Extrema                          -->
+  <!-- ============================================== -->
+
+  <exercise xml:id="ex-classify-critical-points">
+    <introduction>
+      <p>
+        Find the local maximum and minimum values and saddle point(s) of each function.
+      </p>
+    </introduction>
+    <task workspace="1.5in"><statement><p><m>f(x,y)=x^3+y^3-3xy</m></p></statement></task>
+    <task workspace="1.5in"><statement><p><m>f(x,y)=2x^3+6xy+3y^2</m></p></statement></task>
+    <task workspace="1.5in"><statement><p><m>f(x,y)=x^4+y^4-4xy+1</m></p></statement></task>
+    <task workspace="1.5in"><statement><p><m>f(x,y)=xy-x^2y-xy^2</m></p></statement></task>
+  </exercise>
+
+  <exercise xml:id="ex-second-derivative-test">
+    <introduction>
+      <p>
+        Suppose <m>(1,2)</m> is a critical point of a function <m>f</m> with continuous second partial derivatives. In each case, what can you say about <m>f</m> at <m>(1,2)</m>?
+      </p>
+    </introduction>
+    <task workspace="1.5in">
+      <statement>
+        <p><m>f_{xx}(1,2)=4, \quad f_{xy}(1,2)=3, \quad f_{yy}(1,2)=5</m></p>
+      </statement>
+    </task>
+    <task workspace="1.5in">
+      <statement>
+        <p><m>f_{xx}(1,2)=4, \quad f_{xy}(1,2)=6, \quad f_{yy}(1,2)=5</m></p>
+      </statement>
+    </task>
+    <task workspace="1.5in">
+      <statement>
+        <p><m>f_{xx}(1,2)=-2, \quad f_{xy}(1,2)=1, \quad f_{yy}(1,2)=-3</m></p>
+      </statement>
+    </task>
+    <task workspace="1.5in">
+      <statement>
+        <p><m>f_{xx}(1,2)=2, \quad f_{xy}(1,2)=4, \quad f_{yy}(1,2)=8</m></p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-inconclusive-test">
+    <introduction>
+      <p>
+        Let <m>f(x,y)=x^4+y^4</m> and <m>g(x,y)=x^4-y^4</m>.
+      </p>
+    </introduction>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          Show that <m>(0,0)</m> is a critical point of both functions and that the Second Derivatives Test is inconclusive for both.
+        </p>
+      </statement>
+    </task>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          Determine whether <m>(0,0)</m> is a local maximum, local minimum, or saddle point for each function.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Think about the values of the functions near the origin.
+        </p>
+      </hint>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-contour-extrema" workspace="3in">
+    <statement>
+      <p>
+        A contour map of a function <m>f</m> is shown below.
+      </p>
+      <!-- FIGURE PLACEHOLDER: replace with an <image> (e.g., a <latex-image>) -->
+      <p>
+        <alert>[Figure placeholder]</alert> A contour map of <m>f</m> with labeled level curves showing (at least) one local maximum (concentric closed curves with values increasing inward), one local minimum (concentric closed curves with values decreasing inward), and one saddle point (an <q>X</q>-shaped crossing of level curves, with higher values on two opposite sides and lower values on the other two). Several points are labeled, e.g., <m>A</m><ndash/><m>E</m>.
+      </p>
+      <p>
+        Use the map to locate any local maxima, local minima, and saddle points of <m>f</m>. Explain your reasoning.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-distance-to-plane" workspace="3in">
+    <statement>
+      <p>
+        Find the shortest distance from the point <m>(1,0,-2)</m> to the plane <m>x+2y+z=4</m>. (Use the techniques of this section, not the distance formula from Chapter 2.)
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-box-volume" workspace="3in">
+    <statement>
+      <p>
+        A rectangular box without a lid is to be made from <m>12\text{ m}^2</m> of cardboard. Find the maximum volume of such a box.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-closest-points" workspace="3in">
+    <statement>
+      <p>
+        Find the points on the surface <m>z^2=xy+1</m> that are closest to the origin.
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================== -->
+  <!-- Mixed: True/False                              -->
+  <!-- ============================================== -->
+
+  <exercise xml:id="ex-true-false">
+    <introduction>
+      <p>
+        Determine whether each statement is true or false. If it is true, explain why. If it is false, explain why or give a counterexample.
+      </p>
+    </introduction>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          If <m>f(x,y)\to L</m> as <m>(x,y)\to(a,b)</m> along every line through <m>(a,b)</m>, then <m>\displaystyle\lim_{(x,y)\to(a,b)}f(x,y)=L</m>.
+        </p>
+      </statement>
+    </task>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          <m>D_{\bvec{u}}f(a,b)</m> is a vector.
+        </p>
+      </statement>
+    </task>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          <m>\grad f(a,b)</m> is orthogonal to the level curve of <m>f</m> through <m>(a,b)</m>.
+        </p>
+      </statement>
+    </task>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          The maximum value of <m>D_{\bvec{u}}f(a,b)</m> over all unit vectors <m>\bvec{u}</m> is <m>|\grad f(a,b)|</m>.
+        </p>
+      </statement>
+    </task>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          For any unit vector <m>\bvec{u}</m>, <m>D_{-\bvec{u}}f(a,b)=-D_{\bvec{u}}f(a,b)</m>.
+        </p>
+      </statement>
+    </task>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          If <m>\grad f(a,b)=\bvec{0}</m>, then <m>f</m> has a local maximum or a local minimum at <m>(a,b)</m>.
+        </p>
+      </statement>
+    </task>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          If <m>(a,b)</m> is a critical point of <m>f</m>, <m>f_{xx}(a,b)>0</m>, and <m>f_{yy}(a,b)>0</m>, then <m>f</m> has a local minimum at <m>(a,b)</m>.
+        </p>
+      </statement>
+    </task>
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          If <m>f</m> is differentiable and has a local maximum at <m>(a,b)</m>, then <m>\grad f(a,b)=\bvec{0}</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+</worksheet>

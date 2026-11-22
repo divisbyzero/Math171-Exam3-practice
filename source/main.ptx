@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <docinfo>
+    <directories external="../assets"/>
+    <document-id>math171-exam3-practice</document-id>
+
+    <macros>
+      \newcommand{\R}{\mathbb{R}}
+      \newcommand{\C}{\mathbb{C}}
+      \newcommand{\Z}{\mathbb{Z}}
+      \newcommand{\Q}{\mathbb{Q}}
+      \newcommand{\N}{\mathbb{N}}
+      \newcommand{\mbf}{\mathbf}
+      \newcommand{\ep}{\varepsilon}
+      \newcommand{\grad}{\nabla}
+      \newcommand{\proj}{\operatorname{proj}}
+      \newcommand{\orth}{\operatorname{orth}}
+      \newcommand{\comp}{\operatorname{comp}}
+      \newcommand{\bvec}[1]{\vec{\mathbf{#1}}}
+      \newcommand{\uvec}[1]{\boldsymbol{\hat{\textbf{#1}}}}
+      \newcommand{\uveci}{\uvec{\imath}}
+      \newcommand{\uvecj}{\uvec{\jmath}}
+      \newcommand{\uveck}{\uvec{k}}
+    </macros>
+    <latex-image-preamble>\usepackage{tikz}</latex-image-preamble>
+  </docinfo>
+
+  <article xml:id="exam3-practice">
+    <title>Exam 3 Practice Problems</title>
+    <subtitle>Sections 5.3<ndash/>5.10</subtitle>
+
+    <introduction>
+      <assemblage>
+        <p>
+          These problems are meant to help you prepare for Exam 3, which covers limits, continuity, partial derivatives, tangent planes, linear approximation, differentiability, directional derivatives and the gradient, and relative extrema. Show your work and practice explaining your reasoning in complete sentences.
+        </p>
+      </assemblage>
+    </introduction>
+
+    <xi:include href="./practice-problems.ptx" />
+  </article>
+
+</pretext>

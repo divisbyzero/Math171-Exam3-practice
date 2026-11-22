@@ -14,19 +14,17 @@
     </statement>
     <solution>
       <p>
-        Along the <m>x</m>-axis (<m>y=0</m>), the function is
-        <m>\frac{0}{2x^4}=0</m> for <m>x\neq 0</m>, so the limit along this path is <m>0</m>.
-      </p>
-      <p>
-        Along the line <m>y=x</m>, the function is
+        Let <m>f(x,y)=\frac{3xy}{2x^4+5y^2}</m>. Along <m>y=0</m>:
         <md>
-          <mrow>\frac{3x\cdot x}{2x^4+5x^2} \amp = \frac{3x^2}{x^2(2x^2+5)}</mrow>
-          <mrow>\amp = \frac{3}{2x^2+5}</mrow>
-        </md>,
-        which approaches <m>\frac{3}{5}</m> as <m>x\to 0</m>.
-      </p>
-      <p>
-        Since the function approaches different values along two different paths to <m>(0,0)</m>, the limit does not exist.
+          \lim_{x\to 0} f(x,0)=\lim_{x\to 0}\frac{0}{2x^4}=0
+        </md>.
+        Along <m>y=x</m>:
+        <md>
+          <mrow>\lim_{x\to 0} f(x,x) \amp = \lim_{x\to 0}\frac{3x^2}{2x^4+5x^2}</mrow>
+          <mrow>\amp = \lim_{x\to 0}\frac{3}{2x^2+5}</mrow>
+          <mrow>\amp = \frac{3}{5}</mrow>
+        </md>.
+        Since <m>0\neq\frac{3}{5}</m>, the limit does not exist.
       </p>
     </solution>
   </exercise>
@@ -161,10 +159,15 @@
           <md>
             <mrow>f_x(x,y) \amp = \frac{x}{\sqrt{x^2+3y}}, \amp f_y(x,y) \amp = \frac{3}{2\sqrt{x^2+3y}}</mrow>
           </md>,
-          so <m>f_x(1,1)=\frac{1}{2}</m> and <m>f_y(1,1)=\frac{3}{4}</m>. The tangent plane is
+          so <m>f_x(1,1)=\frac{1}{2}</m> and <m>f_y(1,1)=\frac{3}{4}</m>.
+          A normal vector to the tangent plane is
           <md>
-            z = 2+\tfrac{1}{2}(x-1)+\tfrac{3}{4}(y-1)
-          </md>.
+            \bvec{n}=\langle f_x(1,1),\,f_y(1,1),\,-1\rangle=\left\langle \tfrac{1}{2},\,\tfrac{3}{4},\,-1\right\rangle
+          </md>,
+          and the plane passes through the point <m>(1,1,2)</m>. So the tangent plane is
+          <md>
+            \tfrac{1}{2}(x-1)+\tfrac{3}{4}(y-1)-(z-2)=0
+            </md>
         </p>
       </solution>
     </task>
@@ -209,7 +212,7 @@
     <introduction>
       <p>
         You are hiking on a hill whose elevation (in meters) is
-        <m>h(x,y)=1200-0.01x^2-0.02y^2</m>, where <m>x</m> and <m>y</m> are
+        <md>h(x,y)=1200-0.01x^2-0.02y^2</md> where <m>x</m> and <m>y</m> are
         measured in meters, the positive <m>x</m>-axis points east, and the
         positive <m>y</m>-axis points north.
         You are standing at the point <m>(60,20)</m>.
@@ -225,12 +228,12 @@
       </statement>
       <solution>
         <p>
-          The gradient is <m>\grad h=\langle -0.02x,\,-0.04y\rangle</m>, so
-          <m>\grad h(60,20)=\langle -1.2,\,-0.8\rangle</m>.
+          The gradient is <md>\grad h(x,y)=\langle -0.02x,\,-0.04y\rangle</md>. So,
+          <md>\grad h(60,20)=\langle -1.2,\,-0.8\rangle</md>.
           Northeast is the direction of the unit vector <m>\bvec{u}=\frac{1}{\sqrt{2}}\langle 1,1\rangle</m>, so
           <md>
             <mrow>D_{\bvec{u}}h(60,20) \amp = \langle -1.2,\,-0.8\rangle\cdot\tfrac{1}{\sqrt{2}}\langle 1,1\rangle</mrow>
-            <mrow>\amp = -\tfrac{2}{\sqrt{2}} = -\sqrt{2}\approx -1.41</mrow>
+            <mrow>\amp = -\tfrac{2}{\sqrt{2}} = -\sqrt{2}</mrow>
           </md>.
           Since this is negative, you are descending, at a rate of <m>\sqrt{2}\approx 1.41</m> meters of elevation per meter walked.
         </p>
@@ -240,15 +243,13 @@
     <task workspace="1.5in">
       <statement>
         <p>
-          In what direction should you walk to climb most steeply?
+          In what direction should you walk to climb most steeply? (You do not have to give compass directions; a vector is sufficient.)
           What is the slope in that direction?
         </p>
       </statement>
       <solution>
         <p>
-          You climb most steeply in the direction of <m>\grad h(60,20)=\langle -1.2,\,-0.8\rangle</m>, which points in the same direction as
-          <m>\langle -3,-2\rangle</m> (southwest, but more west than south). The unit vector in this direction is
-          <m>\frac{1}{\sqrt{13}}\langle -3,-2\rangle</m>. The slope in this direction is
+          You climb most steeply in the direction of <m>\grad h(60,20)=\langle -1.2,\,-0.8\rangle</m> (roughly southwest, but more west than south). The slope in this direction is
           <md>
             |\grad h(60,20)|=\sqrt{(-1.2)^2+(-0.8)^2}=\sqrt{2.08}=\tfrac{2\sqrt{13}}{5}\approx 1.44
           </md>.
@@ -264,10 +265,10 @@
       </statement>
       <solution>
         <p>
-          To stay at the same elevation, walk in a direction <m>\bvec{u}</m> with <m>D_{\bvec{u}}h(60,20)=\grad h(60,20)\cdot\bvec{u}=0</m>, that is, perpendicular to <m>\langle -3,-2\rangle</m>.
-          The two such unit vectors are
+          To stay at the same elevation, walk in a direction <m>\bvec{u}</m> with <m>D_{\bvec{u}}h(60,20)=\grad h(60,20)\cdot\bvec{u}=0</m>, that is, perpendicular to <m>\langle -1.2,-0.8\rangle</m>.
+          Two such vectors are
           <md>
-            \bvec{u}=\tfrac{1}{\sqrt{13}}\langle 2,-3\rangle \quad\text{and}\quad \bvec{u}=\tfrac{1}{\sqrt{13}}\langle -2,3\rangle
+            \bvec{v}=\langle 0.8,-1.2\rangle \quad\text{and}\quad \bvec{w}=\langle -0.8,1.2\rangle
           </md>.
         </p>
       </solution>
@@ -332,11 +333,10 @@
     </statement>
     <solution>
       <p>
-        Write the surface as a level surface <m>F(x,y,z)=0</m>, where <m>F(x,y,z)=yz-\ln(x+z)</m>. Then
+        Define <md>F(x,y,z)=yz-\ln(x+z)</md>. Then the given surface is the level surface <m>F(x,y,z)=0</m>. The gradient of <m>F</m> is
         <md>
-          <mrow>F_x \amp = -\frac{1}{x+z}, \amp F_y \amp = z, \amp F_z \amp = y-\frac{1}{x+z}</mrow>
-        </md>,
-        so <m>\grad F(0,0,1)=\langle -1,\,1,\,-1\rangle</m>. This vector is normal to the surface at <m>(0,0,1)</m>, so the tangent plane is
+        \grad F(x,y,z)=\left\langle -\frac{1}{x+z},\,z,\,y-\frac{1}{x+z} \right\rangle</md>. So, 
+        <md>\bvec{n}=\grad F(0,0,1)=\langle -1,\,1,\,-1\rangle</md> is a normal vector to the tangent plane at <m>(0,0,1)</m>. Hence, the tangent plane is
         <md>
           -(x-0)+(y-0)-(z-1)=0
         </md>,

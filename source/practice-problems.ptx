@@ -490,7 +490,48 @@
   </exercise>
 
 
-
+  <exercise xml:id="ex-box-volume" workspace="3in">
+    <statement>
+      <p>
+        A rectangular box without a lid is to be made from <m>12\text{ m}^2</m>
+        of cardboard.
+        Find the maximum volume of such a box.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Let the base be <m>x</m> by <m>y</m> and the height be <m>z</m> (all in meters). With no lid, the amount of cardboard is
+        <m>xy+2xz+2yz=12</m>, so <m>z=\frac{12-xy}{2(x+y)}</m>. The volume is
+        <md>
+          V(x,y)=xyz=\frac{12xy-x^2y^2}{2(x+y)}
+        </md>.
+        Using the quotient rule and simplifying,
+        <md>
+          <mrow>V_x(x,y) \amp = \frac{(12y-2xy^2)\cdot 2(x+y)-(12xy-x^2y^2)\cdot 2}{4(x+y)^2}</mrow>
+          <mrow>\amp = \frac{y^2(12-2xy-x^2)}{2(x+y)^2}</mrow>
+          <mrow>V_y(x,y) \amp = \frac{(12x-2x^2y)\cdot 2(x+y)-(12xy-x^2y^2)\cdot 2}{4(x+y)^2}</mrow>
+          <mrow>\amp = \frac{x^2(12-2xy-y^2)}{2(x+y)^2}</mrow>
+        </md>.
+      </p>
+      <p>
+        Setting both equal to zero gives
+        <md>
+          <mrow>y^2(12-2xy-x^2) \amp = 0</mrow>
+          <mrow>x^2(12-2xy-y^2) \amp = 0</mrow>
+        </md>.
+        Because <m>x,y\gt 0</m>, the solutions <m>x=0</m> and <m>y=0</m> are not in the domain, so
+        <md>
+          <mrow>12-2xy-x^2 \amp = 0</mrow>
+          <mrow>12-2xy-y^2 \amp = 0</mrow>
+        </md>.
+        Subtracting the equations, we obtain <m>x^2=y^2</m>, and because <m>x,y\gt 0</m>, <m>x=y</m>. Then <m>3x^2=12</m>, so <m>x=y=2</m> and <m>z=\frac{12-4}{8}=1</m>.
+      </p>
+      <p>
+        The volume tends to <m>0</m> at the edges of the allowed region (as <m>x</m> or <m>y</m> approaches <m>0</m>, or <m>xy</m> approaches <m>12</m>), so this single critical point gives the maximum. The maximum volume is
+        <m>V=2\cdot 2\cdot 1=4\text{ m}^3</m>.
+      </p>
+    </solution>
+  </exercise>
   <exercise xml:id="ex-second-derivative-test">
     <introduction>
       <p>
@@ -503,7 +544,7 @@
     <task label="sdt-a">
       <statement>
         <p>
-          <m>f_{xx}(1,2)=4, \quad f_{xy}(1,2)=3, \quad f_{yy}(1,2)=5</m>
+          <m>f_{xx}(1,2)=4, \quad f_{yy}(1,2)=5, \quad f_{xy}(1,2)=3</m>
         </p>
       </statement>
       <choices randomize="no">
@@ -529,7 +570,7 @@
     <task label="sdt-b">
       <statement>
         <p>
-          <m>f_{xx}(1,2)=4, \quad f_{xy}(1,2)=6, \quad f_{yy}(1,2)=5</m>
+          <m>f_{xx}(1,2)=4, \quad f_{yy}(1,2)=5, \quad f_{xy}(1,2)=6</m>
         </p>
       </statement>
       <choices randomize="no">
@@ -555,7 +596,7 @@
     <task label="sdt-c">
       <statement>
         <p>
-          <m>f_{xx}(1,2)=-2, \quad f_{xy}(1,2)=1, \quad f_{yy}(1,2)=-3</m>
+          <m>f_{xx}(1,2)=-2, \quad f_{yy}(1,2)=-3, \quad f_{xy}(1,2)=1</m>
         </p>
       </statement>
       <choices randomize="no">
@@ -581,7 +622,7 @@
     <task label="sdt-d">
       <statement>
         <p>
-          <m>f_{xx}(1,2)=2, \quad f_{xy}(1,2)=4, \quad f_{yy}(1,2)=8</m>
+          <m>f_{xx}(1,2)=2, \quad f_{yy}(1,2)=8, \quad f_{xy}(1,2)=4</m>
         </p>
       </statement>
       <choices randomize="no">
@@ -607,36 +648,6 @@
 
 
 
-  <exercise xml:id="ex-box-volume" workspace="3in">
-    <statement>
-      <p>
-        A rectangular box without a lid is to be made from <m>12\text{ m}^2</m>
-        of cardboard.
-        Find the maximum volume of such a box.
-      </p>
-    </statement>
-    <solution>
-      <p>
-        Let the base be <m>x</m> by <m>y</m> and the height be <m>z</m> (all in meters). With no lid, the amount of cardboard is
-        <m>xy+2xz+2yz=12</m>, so <m>z=\frac{12-xy}{2(x+y)}</m>. The volume is
-        <md>
-          V(x,y)=xyz=\frac{12xy-x^2y^2}{2(x+y)}
-        </md>.
-        Using the quotient rule and simplifying,
-        <md>
-          <mrow>V_x(x,y) \amp = \frac{y^2(12-2xy-x^2)}{2(x+y)^2}</mrow>
-          <mrow>V_y(x,y) \amp = \frac{x^2(12-2xy-y^2)}{2(x+y)^2}</mrow>
-        </md>.
-      </p>
-      <p>
-        Since <m>x,y\gt 0</m>, setting both equal to zero gives <m>12-2xy-x^2=0</m> and <m>12-2xy-y^2=0</m>. Subtracting, <m>x^2=y^2</m>, so <m>x=y</m>. Then <m>3x^2=12</m>, so <m>x=y=2</m> and <m>z=\frac{12-4}{8}=1</m>.
-      </p>
-      <p>
-        The volume tends to <m>0</m> at the edges of the allowed region (as <m>x</m> or <m>y</m> approaches <m>0</m>, or <m>xy</m> approaches <m>12</m>), so this single critical point gives the maximum. The maximum volume is
-        <m>V=2\cdot 2\cdot 1=4\text{ m}^3</m>.
-      </p>
-    </solution>
-  </exercise>
 
 
   <exercise xml:id="ex-true-false">

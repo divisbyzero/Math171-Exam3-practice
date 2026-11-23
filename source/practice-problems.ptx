@@ -8,23 +8,35 @@
       <p>
         Show that the following limit does not exist
         <md>
-          \lim_{(x,y)\to(0,0)}\frac{3xy}{2x^4+5y^2}
+          \lim_{(x,y)\to(0,0)}\frac{3xy}{2x^2+5y^2}
         </md>.
       </p>
     </statement>
     <solution>
       <p>
-        Let <m>f(x,y)=\frac{3xy}{2x^4+5y^2}</m>. Along <m>y=0</m>:
+        Let <m>f(x,y)=\frac{3xy}{2x^2+5y^2}</m>.
+      </p>
+      <p>
+        <alert>Method 1 (two paths).</alert> Along <m>y=0</m>:
         <md>
-          \lim_{x\to 0} f(x,0)=\lim_{x\to 0}\frac{0}{2x^4}=0
+          \lim_{x\to 0} f(x,0)=\lim_{x\to 0}\frac{0}{2x^2}=0
         </md>.
         Along <m>y=x</m>:
         <md>
-          <mrow>\lim_{x\to 0} f(x,x) \amp = \lim_{x\to 0}\frac{3x^2}{2x^4+5x^2}</mrow>
-          <mrow>\amp = \lim_{x\to 0}\frac{3}{2x^2+5}</mrow>
-          <mrow>\amp = \frac{3}{5}</mrow>
+          <mrow>\lim_{x\to 0} f(x,x) \amp = \lim_{x\to 0}\frac{3x^2}{2x^2+5x^2}</mrow>
+          <mrow>\amp = \lim_{x\to 0}\frac{3x^2}{7x^2}</mrow>
+          <mrow>\amp = \frac{3}{7}</mrow>
         </md>.
-        Since <m>0\neq\frac{3}{5}</m>, the limit does not exist.
+        Since <m>0\neq\frac{3}{7}</m>, the limit does not exist.
+      </p>
+      <p>
+        <alert>Method 2 (all lines <m>y=mx</m>).</alert>
+        <md>
+          <mrow>\lim_{x\to 0} f(x,mx) \amp = \lim_{x\to 0}\frac{3mx^2}{2x^2+5m^2x^2}</mrow>
+          <mrow>\amp = \lim_{x\to 0}\frac{3m}{2+5m^2}</mrow>
+          <mrow>\amp = \frac{3m}{2+5m^2}</mrow>
+        </md>.
+        This value depends on <m>m</m>, so the limit does not exist.
       </p>
     </solution>
   </exercise>
@@ -68,74 +80,215 @@
     </solution>
   </exercise>
 
-  <exercise xml:id="ex-contour-partials">
+  <exercise xml:id="ex-isotherms">
     <introduction>
       <p>
-        A contour map of a function <m>f</m> is shown below, with the points
-        <m>P</m> and <m>Q</m> marked.
+        The map below shows the level curves of the temperature function <m>T(x,y)</m> in degrees Fahrenheit.
+        (As usual, we assume the positive <m>x</m>-axis points east and the positive <m>y</m>-axis points north.)
+        The points <m>A</m>, <m>B</m>, <m>\ldots</m>, <m>H</m> are marked on the map, with coordinates
+        <m>A=(x_A,y_A)</m>, <m>B=(x_B,y_B)</m>, and so on.
       </p>
-      <!-- FIGURE PLACEHOLDER: replace with an <image> (e.g., a <latex-image>) -->
-      <p>
-        <alert>[Figure placeholder]</alert> A contour map of a function
-        <m>f(x,y)</m> (e.g., a hill whose peak is up and to the right), with
-        level curves labeled by their values (e.g., <m>1,2,3,4,5</m>).
-        Point <m>P</m> sits where the level curves increase to the right and are
-        getting closer together; point <m>Q</m> sits where the values decrease
-        as <m>y</m> increases.
-      </p>
-
-      <p>
-        Determine whether each quantity is positive, negative, or zero.
-        Explain your reasoning.
-      </p>
+      <image source="us-isotherms.png" width="100%">
+        <shortdescription>Temperature contour map of the contiguous United States with labeled points A through H and direction vectors</shortdescription>
+        <description>
+          <p>
+            A map of the contiguous United States with isotherms (level curves of temperature) labeled from <m>55</m> degrees in the north to <m>90</m> degrees along the Texas Gulf Coast.
+            Temperatures generally increase from north to south.
+          </p>
+          <ul>
+            <li><p><m>A</m> is near the Gulf Coast of Louisiana, between the <m>80</m> and <m>85</m> degree curves. Eight vectors labeled <m>\bvec{a}</m> through <m>\bvec{h}</m> radiate from <m>A</m> in the compass directions north, northeast, east, southeast, south, southwest, west, and northwest.</p></li>
+            <li><p><m>B</m> is in Montana, on the northern edge of a warm closed region, near the <m>65</m> degree curve.</p></li>
+            <li><p><m>C</m> is in the Texas Panhandle, between the <m>75</m> degree curve to the north and the <m>80</m> degree curve to the south.</p></li>
+            <li><p><m>D</m> is in Kansas, inside a cooler tongue bounded by the <m>70</m> degree curve. A unit vector <m>\bvec{u}</m> at <m>D</m> points southwest, toward the <m>70</m> degree curve.</p></li>
+            <li><p><m>E</m> is in Wyoming, at the center of a small warm region of closed curves.</p></li>
+            <li><p><m>F</m> is in Virginia and West Virginia, at the center of a cool closed <m>60</m> degree curve.</p></li>
+            <li><p><m>G</m> is in Utah, between the warm closed regions around <m>E</m> (to the northeast) and <m>H</m> (to the southwest), with cooler temperatures to the west and east.</p></li>
+            <li><p><m>H</m> is in southern Nevada, at the center of a warm bullseye of tightly spaced closed curves (<m>75</m>, <m>80</m>, <m>85</m>, and warmer).</p></li>
+          </ul>
+        </description>
+      </image>
     </introduction>
 
-    <task workspace="1.5in">
+    <task label="iso-1">
       <statement>
         <p>
-          <m>f_x(P)</m>
+          Ignoring length, which of the vectors <m>\bvec{a}</m>, <m>\bvec{b}</m>, <m>\ldots</m>, <m>\bvec{h}</m> points in the direction of <m>\grad T(x_A,y_A)</m>?
         </p>
       </statement>
+      <choices randomize="no">
+        <choice>
+          <statement><p>Vector <m>\bvec{a}</m></p></statement>
+          <feedback><p>Incorrect.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>Vector <m>\bvec{b}</m></p></statement>
+          <feedback><p>Incorrect.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>Vector <m>\bvec{c}</m></p></statement>
+          <feedback><p>Incorrect.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>Vector <m>\bvec{d}</m></p></statement>
+          <feedback><p>Incorrect.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>Vector <m>\bvec{e}</m></p></statement>
+          <feedback><p>Incorrect.</p></feedback>
+        </choice>
+        <choice correct="yes">
+          <statement><p>Vector <m>\bvec{f}</m></p></statement>
+          <feedback><p>Correct.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>Vector <m>\bvec{g}</m></p></statement>
+          <feedback><p>Incorrect.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>Vector <m>\bvec{h}</m></p></statement>
+          <feedback><p>Incorrect.</p></feedback>
+        </choice>
+      </choices>
     </task>
 
-    <task workspace="1.5in">
+
+    <task label="iso-2">
       <statement>
         <p>
-          <m>f_y(P)</m>
+          Which is greater, <m>|\grad T(x_A,y_A)|</m> or <m>|\grad T(x_B,y_B)|</m>?
         </p>
       </statement>
+      <choices randomize="no">
+        <choice>
+          <statement><p><m>|\grad T(x_A,y_A)|</m></p></statement>
+          <feedback><p>Correct.</p></feedback>
+        </choice>
+        <choice correct="yes">
+          <statement><p><m>|\grad T(x_B,y_B)|</m></p></statement>
+          <feedback><p>Incorrect.</p></feedback>
+        </choice>
+      </choices>
     </task>
 
-    <task workspace="1.5in">
+
+    <task label="iso-3">
       <statement>
         <p>
-          <m>f_{xx}(P)</m>
+          Is <m>T_y(x_C,y_C)</m> positive, negative, zero, or is it impossible to tell?
         </p>
       </statement>
+      <choices randomize="no">
+        <choice correct="yes">
+          <statement><p>Positive</p></statement>
+          <feedback><p>Correct.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>Negative</p></statement>
+          <feedback><p>Incorrect.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>Zero</p></statement>
+          <feedback><p>Incorrect.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>Impossible to tell</p></statement>
+          <feedback><p>Incorrect.</p></feedback>
+        </choice>
+      </choices>
     </task>
 
-    <task workspace="1.5in">
+    <task label="iso-4">
       <statement>
         <p>
-          <m>f_x(Q)</m>
+          Suppose <m>\bvec{u}</m> is the unit vector shown on the map. Is <m>D_{\bvec{u}}T(x_D,y_D)</m> positive, negative, zero, or is it impossible to tell?
         </p>
       </statement>
+      <choices randomize="no">
+        <choice correct="yes">
+          <statement><p>Positive</p></statement>
+          <feedback><p>Correct.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>Negative</p></statement>
+          <feedback><p>Incorrect.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>Zero</p></statement>
+          <feedback><p>Incorrect.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>Impossible to tell</p></statement>
+          <feedback><p>Incorrect.</p></feedback>
+        </choice>
+      </choices>
     </task>
 
-    <task workspace="1.5in">
+    <task label="iso-5">
       <statement>
         <p>
-          <m>f_y(Q)</m>
+          Which point is a local minimum of <m>T</m>?
         </p>
       </statement>
+      <choices randomize="no">
+        <choice>
+          <statement><p>Point <m>C</m></p></statement>
+          <feedback><p>Incorrect.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>Point <m>E</m></p></statement>
+          <feedback><p>Incorrect.</p></feedback>
+        </choice>
+        <choice correct="yes">
+          <statement><p>Point <m>F</m></p></statement>
+          <feedback><p>Correct.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>Point <m>G</m></p></statement>
+          <feedback><p>Incorrect.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>Point <m>H</m></p></statement>
+          <feedback><p>Incorrect.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>None of these</p></statement>
+          <feedback><p>Incorrect.</p></feedback>
+        </choice>
+      </choices>
     </task>
 
-    <task workspace="1.5in">
+    <task label="iso-6">
       <statement>
         <p>
-          <m>f_{yy}(Q)</m>
+          Which point is a saddle point of <m>T</m>?
         </p>
       </statement>
+      <choices randomize="no">
+        <choice>
+          <statement><p>Point <m>C</m></p></statement>
+          <feedback><p>Incorrect.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>Point <m>E</m></p></statement>
+          <feedback><p>Incorrect.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>Point <m>F</m></p></statement>
+          <feedback><p>Incorrect.</p></feedback>
+        </choice>
+        <choice correct="yes">
+          <statement><p>Point <m>G</m></p></statement>
+          <feedback><p>Correct.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>Point <m>H</m></p></statement>
+          <feedback><p>Incorrect.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>None of these</p></statement>
+          <feedback><p>Incorrect.</p></feedback>
+        </choice>
+      </choices>
     </task>
   </exercise>
 
@@ -276,77 +429,6 @@
     </task>
   </exercise>
 
-  <exercise xml:id="ex-contour-gradient">
-    <introduction>
-      <p>
-        The contour map below shows level curves of a function <m>f(x,y)</m>.
-        The points <m>A</m>, <m>B</m>, and <m>C</m> and the unit vectors
-        <m>\bvec{u}</m> and <m>\bvec{v}</m> (based at <m>A</m>) are marked on
-        the map.
-      </p>
-      <!-- FIGURE PLACEHOLDER: replace with an <image> (e.g., a <latex-image>) -->
-      <p>
-        <alert>[Figure placeholder]</alert> A contour map of <m>f</m> with
-        labeled level curves (e.g., <m>10,20,\ldots,60</m>), some regions where
-        the curves are close together and others where they are far apart.
-        Points <m>A</m>, <m>B</m>, and <m>C</m> are marked.
-        At <m>A</m>, unit vector <m>\bvec{u}</m> points roughly toward lower
-        values and unit vector <m>\bvec{v}</m> is tangent to the level curve
-        through <m>A</m>.
-      </p>
-    </introduction>
-
-    <task workspace="1.5in">
-      <statement>
-        <p>
-          Sketch <m>\grad f</m> at each of the points <m>A</m>, <m>B</m>, and
-          <m>C</m>.
-          (Only the direction matters.)
-        </p>
-      </statement>
-    </task>
-
-    <task workspace="1.5in">
-      <statement>
-        <p>
-          At which of the three points is <m>|\grad f|</m> the largest?
-          The smallest?
-          Explain.
-        </p>
-      </statement>
-    </task>
-
-    <task workspace="1.5in">
-      <statement>
-        <p>
-          Is <m>D_{\bvec{u}}f(A)</m> positive, negative, or zero?
-          What about <m>D_{\bvec{v}}f(A)</m>?
-        </p>
-      </statement>
-    </task>
-  </exercise>
-
-  <exercise xml:id="ex-tangent-plane-surface" workspace="3in">
-    <statement>
-      <p>
-        Find an equation of the tangent plane to the surface <m>yz=\ln(x+z)</m> at the point <m>(0,0,1)</m>.
-      </p>
-    </statement>
-    <solution>
-      <p>
-        Define <md>F(x,y,z)=yz-\ln(x+z)</md>. Then the given surface is the level surface <m>F(x,y,z)=0</m>. The gradient of <m>F</m> is
-        <md>
-        \grad F(x,y,z)=\left\langle -\frac{1}{x+z},\,z,\,y-\frac{1}{x+z} \right\rangle</md>. So, 
-        <md>\bvec{n}=\grad F(0,0,1)=\langle -1,\,1,\,-1\rangle</md> is a normal vector to the tangent plane at <m>(0,0,1)</m>. Hence, the tangent plane is
-        <md>
-          -(x-0)+(y-0)-(z-1)=0
-        </md>,
-        or equivalently <m>x-y+z=1</m>.
-      </p>
-    </solution>
-
-  </exercise>
-
 
   <exercise xml:id="ex-classify-critical-points" workspace="3in">
     <statement>
@@ -423,7 +505,7 @@
       <choices randomize="no">
           <choice>
             <statement><p>Local maximum</p></statement>
-            <feedback><p>Not quite. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
+            <feedback><p>Incorrect. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
           </choice>
           <choice correct="yes">
             <statement><p>Local minimum</p></statement>
@@ -431,11 +513,11 @@
           </choice>
           <choice>
             <statement><p>Saddle point</p></statement>
-            <feedback><p>Not quite. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
+            <feedback><p>Incorrect. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
           </choice>
           <choice>
             <statement><p>The test is inconclusive</p></statement>
-            <feedback><p>Not quite. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
+            <feedback><p>Incorrect. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
           </choice>
       </choices>
     </task>
@@ -449,11 +531,11 @@
       <choices randomize="no">
           <choice>
             <statement><p>Local maximum</p></statement>
-            <feedback><p>Not quite. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
+            <feedback><p>Incorrect. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
           </choice>
           <choice>
             <statement><p>Local minimum</p></statement>
-            <feedback><p>Not quite. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
+            <feedback><p>Incorrect. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
           </choice>
           <choice correct="yes">
             <statement><p>Saddle point</p></statement>
@@ -461,7 +543,7 @@
           </choice>
           <choice>
             <statement><p>The test is inconclusive</p></statement>
-            <feedback><p>Not quite. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
+            <feedback><p>Incorrect. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
           </choice>
       </choices>
     </task>
@@ -479,15 +561,15 @@
           </choice>
           <choice>
             <statement><p>Local minimum</p></statement>
-            <feedback><p>Not quite. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
+            <feedback><p>Incorrect. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
           </choice>
           <choice>
             <statement><p>Saddle point</p></statement>
-            <feedback><p>Not quite. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
+            <feedback><p>Incorrect. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
           </choice>
           <choice>
             <statement><p>The test is inconclusive</p></statement>
-            <feedback><p>Not quite. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
+            <feedback><p>Incorrect. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
           </choice>
       </choices>
     </task>
@@ -501,15 +583,15 @@
       <choices randomize="no">
           <choice>
             <statement><p>Local maximum</p></statement>
-            <feedback><p>Not quite. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
+            <feedback><p>Incorrect. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
           </choice>
           <choice>
             <statement><p>Local minimum</p></statement>
-            <feedback><p>Not quite. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
+            <feedback><p>Incorrect. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
           </choice>
           <choice>
             <statement><p>Saddle point</p></statement>
-            <feedback><p>Not quite. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
+            <feedback><p>Incorrect. Compute <m>D=f_{xx}f_{yy}-f_{xy}^2</m> and check its sign (and, if needed, the sign of <m>f_{xx}</m>).</p></feedback>
           </choice>
           <choice correct="yes">
             <statement><p>The test is inconclusive</p></statement>
@@ -520,29 +602,6 @@
   </exercise>
 
 
-  <exercise xml:id="ex-contour-extrema" workspace="3in">
-    <statement>
-      <p>
-        A contour map of a function <m>f</m> is shown below.
-      </p>
-      <!-- FIGURE PLACEHOLDER: replace with an <image> (e.g., a <latex-image>) -->
-      <p>
-        <alert>[Figure placeholder]</alert> A contour map of <m>f</m> with
-        labeled level curves showing (at least) one local maximum (concentric
-        closed curves with values increasing inward), one local minimum
-        (concentric closed curves with values decreasing inward), and one saddle
-        point (an <q>X</q>-shaped crossing of level curves, with higher values
-        on two opposite sides and lower values on the other two).
-        Several points are labeled, e.g., <m>A</m><ndash/><m>E</m>.
-      </p>
-
-      <p>
-        Use the map to locate any local maxima, local minima, and saddle points
-        of <m>f</m>.
-        Explain your reasoning.
-      </p>
-    </statement>
-  </exercise>
 
   <exercise xml:id="ex-box-volume" workspace="3in">
     <statement>

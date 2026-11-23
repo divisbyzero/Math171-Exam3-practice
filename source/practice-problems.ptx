@@ -222,11 +222,11 @@
       <choices randomize="no">
         <choice>
           <statement><p><m>|\grad T(x_A,y_A)|</m></p></statement>
-          <feedback><p>Correct.</p></feedback>
+          <feedback><p>Incorrect.</p></feedback>
         </choice>
         <choice correct="yes">
           <statement><p><m>|\grad T(x_B,y_B)|</m></p></statement>
-          <feedback><p>Incorrect.</p></feedback>
+          <feedback><p>Correct.</p></feedback>
         </choice>
       </choices>
     </task>

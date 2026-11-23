@@ -179,35 +179,27 @@
       <choices randomize="no">
         <choice>
           <statement><p>Vector <m>\bvec{a}</m></p></statement>
-          <feedback><p>Incorrect.</p></feedback>
         </choice>
         <choice>
           <statement><p>Vector <m>\bvec{b}</m></p></statement>
-          <feedback><p>Incorrect.</p></feedback>
         </choice>
         <choice>
           <statement><p>Vector <m>\bvec{c}</m></p></statement>
-          <feedback><p>Incorrect.</p></feedback>
         </choice>
         <choice>
           <statement><p>Vector <m>\bvec{d}</m></p></statement>
-          <feedback><p>Incorrect.</p></feedback>
         </choice>
         <choice>
           <statement><p>Vector <m>\bvec{e}</m></p></statement>
-          <feedback><p>Incorrect.</p></feedback>
         </choice>
         <choice correct="yes">
           <statement><p>Vector <m>\bvec{f}</m></p></statement>
-          <feedback><p>Correct.</p></feedback>
         </choice>
         <choice>
           <statement><p>Vector <m>\bvec{g}</m></p></statement>
-          <feedback><p>Incorrect.</p></feedback>
         </choice>
         <choice>
           <statement><p>Vector <m>\bvec{h}</m></p></statement>
-          <feedback><p>Incorrect.</p></feedback>
         </choice>
       </choices>
     </task>
@@ -222,11 +214,9 @@
       <choices randomize="no">
         <choice>
           <statement><p><m>|\grad T(x_A,y_A)|</m></p></statement>
-          <feedback><p>Incorrect.</p></feedback>
         </choice>
         <choice correct="yes">
           <statement><p><m>|\grad T(x_B,y_B)|</m></p></statement>
-          <feedback><p>Correct.</p></feedback>
         </choice>
       </choices>
     </task>
@@ -241,19 +231,15 @@
       <choices randomize="no">
         <choice>
           <statement><p>Positive</p></statement>
-          <feedback><p>Incorrect.</p></feedback>
         </choice>
         <choice correct="yes">
           <statement><p>Negative</p></statement>
-          <feedback><p>Correct.</p></feedback>
         </choice>
         <choice>
           <statement><p>Zero</p></statement>
-          <feedback><p>Incorrect.</p></feedback>
         </choice>
         <choice>
           <statement><p>Impossible to tell</p></statement>
-          <feedback><p>Incorrect.</p></feedback>
         </choice>
       </choices>
     </task>
@@ -267,19 +253,15 @@
       <choices randomize="no">
         <choice correct="yes">
           <statement><p>Positive</p></statement>
-          <feedback><p>Correct.</p></feedback>
         </choice>
         <choice>
           <statement><p>Negative</p></statement>
-          <feedback><p>Incorrect.</p></feedback>
         </choice>
         <choice>
           <statement><p>Zero</p></statement>
-          <feedback><p>Incorrect.</p></feedback>
         </choice>
         <choice>
           <statement><p>Impossible to tell</p></statement>
-          <feedback><p>Incorrect.</p></feedback>
         </choice>
       </choices>
     </task>
@@ -293,27 +275,21 @@
       <choices randomize="no">
         <choice>
           <statement><p>Point <m>C</m></p></statement>
-          <feedback><p>Incorrect.</p></feedback>
         </choice>
         <choice>
           <statement><p>Point <m>E</m></p></statement>
-          <feedback><p>Incorrect.</p></feedback>
         </choice>
         <choice correct="yes">
           <statement><p>Point <m>F</m></p></statement>
-          <feedback><p>Correct.</p></feedback>
         </choice>
         <choice>
           <statement><p>Point <m>G</m></p></statement>
-          <feedback><p>Incorrect.</p></feedback>
         </choice>
         <choice>
           <statement><p>Point <m>H</m></p></statement>
-          <feedback><p>Incorrect.</p></feedback>
         </choice>
         <choice>
           <statement><p>None of these</p></statement>
-          <feedback><p>Incorrect.</p></feedback>
         </choice>
       </choices>
     </task>
@@ -327,27 +303,21 @@
       <choices randomize="no">
         <choice>
           <statement><p>Point <m>C</m></p></statement>
-          <feedback><p>Incorrect.</p></feedback>
         </choice>
         <choice>
           <statement><p>Point <m>E</m></p></statement>
-          <feedback><p>Incorrect.</p></feedback>
         </choice>
         <choice>
           <statement><p>Point <m>F</m></p></statement>
-          <feedback><p>Incorrect.</p></feedback>
         </choice>
         <choice correct="yes">
           <statement><p>Point <m>G</m></p></statement>
-          <feedback><p>Correct.</p></feedback>
         </choice>
         <choice>
           <statement><p>Point <m>H</m></p></statement>
-          <feedback><p>Incorrect.</p></feedback>
         </choice>
         <choice>
           <statement><p>None of these</p></statement>
-          <feedback><p>Incorrect.</p></feedback>
         </choice>
       </choices>
     </task>

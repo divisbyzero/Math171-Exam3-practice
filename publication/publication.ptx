@@ -50,6 +50,7 @@
         <!-- You can set a watermark.  The text is the content of the -->
         <!-- element; @scale is a positive number, default 0.5.       -->
         <!--<watermark scale="0.5">DRAFT</watermark>-->
+<!--        <exercise-worksheet solution="no"/>-->
     </common>
 
     <!-- LaTeX (and therefore PDF) specific options.                     -->

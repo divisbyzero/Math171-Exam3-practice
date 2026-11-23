@@ -17,7 +17,8 @@
         Let <md>f(x,y)=\frac{3xy}{2x^2+5y^2}</md>.
       </p>
       <p>
-        <alert>Method 1 (two paths).</alert> Along <m>y=0</m>:
+        <alert>Method 1 (the limit along two paths).</alert> 
+        <p>Along <m>y=0</m>:</p>
         <md>
           \lim_{x\to 0} f(x,0)=\lim_{x\to 0}\frac{0}{2x^2}=0
         </md>.
@@ -30,7 +31,7 @@
         Since <m>0\neq\frac{3}{7}</m>, the limit does not exist.
       </p>
       <p>
-        <alert>Method 2 (all lines <m>y=mx</m>).</alert>
+        <alert>Method 2 (the limit along all lines <m>y=mx</m>).</alert>
         <md>
           <mrow>\lim_{x\to 0} f(x,mx) \amp = \lim_{x\to 0}\frac{3mx^2}{2x^2+5m^2x^2}</mrow>
           <mrow>\amp = \lim_{x\to 0}\frac{3m}{2+5m^2}</mrow>
@@ -85,10 +86,12 @@
             <m>D(1,1)=36(1)(1)-9=27\gt 0</m> and <m>f_{xx}(1,1)=6\gt 0</m>, so <m>(1,1)</m> is a local minimum.
           </p>
         </li>
+        <li>
+          <p>
+            There are no local maxima.
+          </p>
+        </li>
       </ul>
-      <p>
-        There are no local maxima.
-      </p>
     </solution>
   </exercise>
 
@@ -236,13 +239,13 @@
         </p>
       </statement>
       <choices randomize="no">
-        <choice correct="yes">
-          <statement><p>Positive</p></statement>
-          <feedback><p>Correct.</p></feedback>
-        </choice>
         <choice>
-          <statement><p>Negative</p></statement>
+          <statement><p>Positive</p></statement>
           <feedback><p>Incorrect.</p></feedback>
+        </choice>
+        <choice correct="yes">
+          <statement><p>Negative</p></statement>
+          <feedback><p>Correct.</p></feedback>
         </choice>
         <choice>
           <statement><p>Zero</p></statement>

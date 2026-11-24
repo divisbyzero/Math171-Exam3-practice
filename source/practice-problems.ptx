@@ -513,6 +513,14 @@
         </md>
         on the closed triangular region with vertices <m>(0,0)</m>, <m>(4,0)</m>, and <m>(4,8)</m>.
       </p>
+      <image source="extrema_figure.jpg" width="35%">
+        <shortdescription>Shaded triangle with vertices (0,0), (4,0), and (4,8)</shortdescription>
+        <description>
+          <p>
+            The region is shaded in the first quadrant. It is bounded below by the <m>x</m>-axis from <m>0</m> to <m>4</m>, on the right by the vertical line <m>x=4</m> from <m>y=0</m> to <m>y=8</m>, and above by the line segment from the origin to <m>(4,8)</m>.
+          </p>
+        </description>
+      </image>
     </statement>
     <solution>
       <p>
@@ -543,6 +551,14 @@
       <p>
         <em>Corner points.</em> The corners <m>(0,0)</m>, <m>(4,0)</m>, and <m>(4,8)</m> are also candidates.
       </p>
+      <image source="extrema_figure_sol.jpg" width="35%">
+        <shortdescription>The triangle with all seven candidate points marked</shortdescription>
+        <description>
+          <p>
+            The shaded triangle with vertices <m>(0,0)</m>, <m>(4,0)</m>, and <m>(4,8)</m>, with the hypotenuse labeled <m>y=2x</m>. Seven candidate points are marked: the interior critical point <m>(3,1)</m>; the side points <m>(3,0)</m> on the bottom, <m>(4,1)</m> on the right side, and <m>(1,2)</m> on the hypotenuse; and the three corners.
+          </p>
+        </description>
+      </image>
       <p>
         Evaluating <m>f</m> at every candidate:
       </p>

@@ -10,8 +10,7 @@
 <!-- values you may use.                                                  -->
 
 <!-- Publication file for the PRINT (PDF) target only; see project.ptx.  -->
-<!-- Same as publication.ptx, except solutions are hidden so the PDF     -->
-<!-- is a worksheet whose blank space matches the @workspace values.     -->
+<!-- Same as publication.ptx, with solutions shown after each exercise.  -->
 <publication>
     <!-- directories are relative to the main source PreTeXt file.  The   -->
     <!-- companion external directory is a fact of your source and is     -->
@@ -37,7 +36,7 @@
         <!-- gives a single page, 1 is section, 2 is subsection, and so  -->
         <!-- on.  The default depends on the type of document.           -->
         <chunking level="0" />
-        <exercise-worksheet answer="no" solution="no"/>
+        <exercise-worksheet answer="no" solution="yes"/>
 
         <!-- Depth of the table of contents, from 0 through 6.  A value -->
         <!-- of 0 means no table of contents.                           -->

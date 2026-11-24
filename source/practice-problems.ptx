@@ -3,7 +3,7 @@
 <worksheet xml:id="practice-problems" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Exam 3 Practice Problems</title>
 
-  <exercise xml:id="ex-limit-dne" workspace="2in">
+  <exercise xml:id="ex-limit-dne">
     <statement>
       <p>
         Show that the following limit does not exist
@@ -42,7 +42,7 @@
     </solution>
   </exercise>
 
-    <exercise xml:id="ex-classify-critical-points" workspace="3in">
+    <exercise xml:id="ex-classify-critical-points">
     <statement>
       <p>
         Find the locations of any local maxima, local minima, and saddle points of
@@ -330,7 +330,7 @@
       </p>
     </introduction>
 
-    <task workspace="3in">
+    <task>
       <statement>
         <p>
           Find the equation of the tangent plane to the graph <m>z=f(x,y)</m> at
@@ -356,7 +356,7 @@
       </solution>
     </task>
 
-    <task workspace="1in">
+    <task>
       <statement>
         <p>
           Find the linearization <m>L(x,y)</m> of <m>f</m> at the point
@@ -373,7 +373,7 @@
       </solution>
     </task>
 
-    <task workspace="1in">
+    <task>
       <statement>
         <p>
           Use your answer to part (b) to approximate <m>f(1.04,\,0.96)</m>. Then use a calculator to find the actual value, and compare.
@@ -403,7 +403,7 @@
       </p>
     </introduction>
 
-    <task workspace="2.5in">
+    <task>
       <statement>
         <p>
           If you walk northeast, are you ascending or descending?
@@ -424,7 +424,7 @@
       </solution>
     </task>
 
-    <task workspace="1.5in">
+    <task>
       <statement>
         <p>
           In what direction should you walk to climb most steeply? (You do not have to give compass directions; a vector is sufficient.)
@@ -441,7 +441,7 @@
       </solution>
     </task>
 
-    <task workspace="1in">
+    <task>
       <statement>
         <p>
           In what direction(s) should you walk to stay at the same elevation?
@@ -460,7 +460,7 @@
   </exercise>
 
 
-  <exercise xml:id="ex-box-volume" workspace="3in">
+  <exercise xml:id="ex-box-volume">
     <statement>
       <p>
         A rectangular box without a lid is to be made from <m>12\text{ m}^2</m>
@@ -504,7 +504,7 @@
   </exercise>
 
 
-  <exercise xml:id="ex-absolute-extrema-triangle" workspace="3in">
+  <exercise xml:id="ex-absolute-extrema-triangle">
     <statement>
       <p>
         Find the absolute maximum and absolute minimum values of

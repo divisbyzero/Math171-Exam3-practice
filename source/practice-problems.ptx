@@ -509,9 +509,9 @@
       <p>
         Find the absolute maximum and absolute minimum values of
         <md>
-          <mrow>f(x,y) \amp = x^2+y^2-2x-4y</mrow>
+          <mrow>f(x,y) \amp = x^2+y^2-6x-2y</mrow>
         </md>
-        on the closed triangular region with vertices <m>(0,0)</m>, <m>(5,0)</m>, and <m>(0,5)</m>.
+        on the closed triangular region with vertices <m>(0,0)</m>, <m>(4,0)</m>, and <m>(4,8)</m>.
       </p>
     </statement>
     <solution>
@@ -521,27 +521,27 @@
       <p>
         <em>Interior.</em> The first partial derivatives are
         <md>
-          <mrow>f_x(x,y) \amp = 2x-2</mrow>
-          <mrow>f_y(x,y) \amp = 2y-4</mrow>
+          <mrow>f_x(x,y) \amp = 2x-6</mrow>
+          <mrow>f_y(x,y) \amp = 2y-2</mrow>
         </md>.
-        Setting both equal to zero gives <m>x=1</m> and <m>y=2</m>. Since <m>1+2\lt 5</m>, the critical point <m>(1,2)</m> is inside the triangle.
+        Setting both equal to zero gives <m>x=3</m> and <m>y=1</m>. Since <m>0\lt 3\lt 4</m> and <m>0\lt 1\lt 2(3)</m>, the critical point <m>(3,1)</m> is inside the triangle.
       </p>
       <p>
-        <em>Bottom side</em> (along <m>y=0</m>). Here <m>f(x,0)=x^2-2x</m>, whose derivative <m>2x-2</m> is zero at <m>x=1</m>. This gives the candidate point <m>(1,0)</m>.
+        <em>Bottom side</em> (along <m>y=0</m>). Here <m>f(x,0)=x^2-6x</m>, whose derivative <m>2x-6</m> is zero at <m>x=3</m>. This gives the candidate point <m>(3,0)</m>.
       </p>
       <p>
-        <em>Left side</em> (along <m>x=0</m>). Here <m>f(0,y)=y^2-4y</m>, whose derivative <m>2y-4</m> is zero at <m>y=2</m>. This gives the candidate point <m>(0,2)</m>.
+        <em>Right side</em> (along <m>x=4</m>). Here <m>f(4,y)=y^2-2y-8</m>, whose derivative <m>2y-2</m> is zero at <m>y=1</m>. This gives the candidate point <m>(4,1)</m>.
       </p>
       <p>
-        <em>Hypotenuse</em> (along <m>y=5-x</m>). Here
+        <em>Hypotenuse</em> (along <m>y=2x</m>). Here
         <md>
-          <mrow>f(x,5-x) \amp = x^2+(5-x)^2-2x-4(5-x)</mrow>
-          <mrow>\amp = 2x^2-8x+5</mrow>
+          <mrow>f(x,2x) \amp = x^2+(2x)^2-6x-2(2x)</mrow>
+          <mrow>\amp = 5x^2-10x</mrow>
         </md>,
-        whose derivative <m>4x-8</m> is zero at <m>x=2</m>. This gives the candidate point <m>(2,3)</m>.
+        whose derivative <m>10x-10</m> is zero at <m>x=1</m>. This gives the candidate point <m>(1,2)</m>.
       </p>
       <p>
-        <em>Corner points.</em> The corners <m>(0,0)</m>, <m>(5,0)</m>, and <m>(0,5)</m> are also candidates.
+        <em>Corner points.</em> The corners <m>(0,0)</m>, <m>(4,0)</m>, and <m>(4,8)</m> are also candidates.
       </p>
       <p>
         Evaluating <m>f</m> at every candidate:
@@ -549,27 +549,27 @@
       <tabular halign="center">
         <row bottom="minor">
           <cell><m>(x,y)</m></cell>
+          <cell><m>(3,1)</m></cell>
+          <cell><m>(3,0)</m></cell>
+          <cell><m>(4,1)</m></cell>
           <cell><m>(1,2)</m></cell>
-          <cell><m>(1,0)</m></cell>
-          <cell><m>(0,2)</m></cell>
-          <cell><m>(2,3)</m></cell>
           <cell><m>(0,0)</m></cell>
-          <cell><m>(5,0)</m></cell>
-          <cell><m>(0,5)</m></cell>
+          <cell><m>(4,0)</m></cell>
+          <cell><m>(4,8)</m></cell>
         </row>
         <row>
           <cell><m>f(x,y)</m></cell>
+          <cell><m>-10</m></cell>
+          <cell><m>-9</m></cell>
+          <cell><m>-9</m></cell>
           <cell><m>-5</m></cell>
-          <cell><m>-1</m></cell>
-          <cell><m>-4</m></cell>
-          <cell><m>-3</m></cell>
           <cell><m>0</m></cell>
-          <cell><m>15</m></cell>
-          <cell><m>5</m></cell>
+          <cell><m>-8</m></cell>
+          <cell><m>40</m></cell>
         </row>
       </tabular>
       <p>
-        The absolute maximum value is <m>f(5,0)=15</m>, and the absolute minimum value is <m>f(1,2)=-5</m>.
+        The absolute maximum value is <m>f(4,8)=40</m>, and the absolute minimum value is <m>f(3,1)=-10</m>.
       </p>
     </solution>
   </exercise>

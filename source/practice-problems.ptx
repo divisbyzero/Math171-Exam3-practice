@@ -709,114 +709,154 @@
     </introduction>
 
     <task label="tf-a">
-      <statement correct="no">
+      <statement>
         <p>
           If <m>f(x,y)\to L</m> as <m>(x,y)\to(0,0)</m> along the lines <m>x=0</m> and <m>y=0</m>, then <md>\lim_{(x,y)\to(0,0)}f(x,y)=L</md>.
         </p>
       </statement>
-      <feedback>
-        <p>
-          False. Checking two paths is not enough. For <m>f(x,y)=\frac{xy}{x^2+y^2}</m>, the limit along both axes is <m>0</m>, but along <m>y=x</m> the limit is <m>\tfrac12</m>, so the limit does not exist.
-        </p>
-      </feedback>
+      <choices randomize="no">
+        <choice>
+          <statement><p>True</p></statement>
+          <feedback><p>Incorrect. The statement is false. Checking two paths is not enough. For <m>f(x,y)=\frac{xy}{x^2+y^2}</m>, the limit along both axes is <m>0</m>, but along <m>y=x</m> the limit is <m>\tfrac12</m>, so the limit does not exist.</p></feedback>
+        </choice>
+        <choice correct="yes">
+          <statement><p>False</p></statement>
+          <feedback><p>Correct. Checking two paths is not enough. For <m>f(x,y)=\frac{xy}{x^2+y^2}</m>, the limit along both axes is <m>0</m>, but along <m>y=x</m> the limit is <m>\tfrac12</m>, so the limit does not exist.</p></feedback>
+        </choice>
+      </choices>
     </task>
 
     <task label="tf-b">
-      <statement correct="no">
+      <statement>
         <p>
           <m>D_{\bvec{u}}f(a,b)</m> is a vector.
         </p>
       </statement>
-      <feedback>
-        <p>
-          False. <m>D_{\bvec{u}}f(a,b)=\grad f(a,b)\cdot\bvec{u}</m> is a dot product, so it is a scalar (a rate of change), not a vector.
-        </p>
-      </feedback>
+      <choices randomize="no">
+        <choice>
+          <statement><p>True</p></statement>
+          <feedback><p>Incorrect. The statement is false. <m>D_{\bvec{u}}f(a,b)=\grad f(a,b)\cdot\bvec{u}</m> is a dot product, so it is a scalar (a rate of change), not a vector.</p></feedback>
+        </choice>
+        <choice correct="yes">
+          <statement><p>False</p></statement>
+          <feedback><p>Correct. <m>D_{\bvec{u}}f(a,b)=\grad f(a,b)\cdot\bvec{u}</m> is a dot product, so it is a scalar (a rate of change), not a vector.</p></feedback>
+        </choice>
+      </choices>
     </task>
 
     <task label="tf-c">
-      <statement correct="yes">
+      <statement>
         <p>
           <m>\grad f(a,b)</m> is orthogonal to the level curve of <m>f</m>
           through <m>(a,b)</m>.
         </p>
       </statement>
-      <feedback>
-        <p>
-          True. If <m>\bvec{r}(t)</m> parametrizes the level curve <m>f(x,y)=k</m>, differentiating <m>f(\bvec{r}(t))=k</m> gives <m>\grad f\cdot\bvec{r}\,'(t)=0</m>, so the gradient is orthogonal to the curve (when <m>\grad f(a,b)\neq\bvec{0}</m>).
-        </p>
-      </feedback>
+      <choices randomize="no">
+        <choice correct="yes">
+          <statement><p>True</p></statement>
+          <feedback><p>Correct. If <m>\bvec{r}(t)</m> parametrizes the level curve <m>f(x,y)=k</m>, differentiating <m>f(\bvec{r}(t))=k</m> gives <m>\grad f\cdot\bvec{r}\,'(t)=0</m>, so the gradient is orthogonal to the curve (when <m>\grad f(a,b)\neq\bvec{0}</m>).</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>False</p></statement>
+          <feedback><p>Incorrect. The statement is true. If <m>\bvec{r}(t)</m> parametrizes the level curve <m>f(x,y)=k</m>, differentiating <m>f(\bvec{r}(t))=k</m> gives <m>\grad f\cdot\bvec{r}\,'(t)=0</m>, so the gradient is orthogonal to the curve (when <m>\grad f(a,b)\neq\bvec{0}</m>).</p></feedback>
+        </choice>
+      </choices>
     </task>
 
     <task label="tf-d">
-      <statement correct="yes">
+      <statement>
         <p>
           The maximum value of <m>D_{\bvec{u}}f(a,b)</m> over all unit vectors
           <m>\bvec{u}</m> is <m>|\grad f(a,b)|</m>.
         </p>
       </statement>
-      <feedback>
-        <p>
-          True. <m>D_{\bvec{u}}f(a,b)=|\grad f(a,b)|\cos\theta</m>, which is largest when <m>\theta=0</m>, that is, when <m>\bvec{u}</m> points in the direction of <m>\grad f(a,b)</m>.
-        </p>
-      </feedback>
+      <choices randomize="no">
+        <choice correct="yes">
+          <statement><p>True</p></statement>
+          <feedback><p>Correct. <m>D_{\bvec{u}}f(a,b)=|\grad f(a,b)|\cos\theta</m>, which is largest when <m>\theta=0</m>, that is, when <m>\bvec{u}</m> points in the direction of <m>\grad f(a,b)</m>.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>False</p></statement>
+          <feedback><p>Incorrect. The statement is true. <m>D_{\bvec{u}}f(a,b)=|\grad f(a,b)|\cos\theta</m>, which is largest when <m>\theta=0</m>, that is, when <m>\bvec{u}</m> points in the direction of <m>\grad f(a,b)</m>.</p></feedback>
+        </choice>
+      </choices>
     </task>
 
     <task label="tf-e">
-      <statement correct="yes">
+      <statement>
         <p>
           For any unit vector <m>\bvec{u}</m>,
           <m>D_{-\bvec{u}}f(a,b)=-D_{\bvec{u}}f(a,b)</m>.
         </p>
       </statement>
-      <feedback>
-        <p>
-          True. <m>D_{-\bvec{u}}f(a,b)=\grad f(a,b)\cdot(-\bvec{u})=-\grad f(a,b)\cdot\bvec{u}=-D_{\bvec{u}}f(a,b)</m>.
-        </p>
-      </feedback>
+      <choices randomize="no">
+        <choice correct="yes">
+          <statement><p>True</p></statement>
+          <feedback><p>Correct. <m>D_{-\bvec{u}}f(a,b)=\grad f(a,b)\cdot(-\bvec{u})=-\grad f(a,b)\cdot\bvec{u}=-D_{\bvec{u}}f(a,b)</m>.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>False</p></statement>
+          <feedback><p>Incorrect. The statement is true. <m>D_{-\bvec{u}}f(a,b)=\grad f(a,b)\cdot(-\bvec{u})=-\grad f(a,b)\cdot\bvec{u}=-D_{\bvec{u}}f(a,b)</m>.</p></feedback>
+        </choice>
+      </choices>
     </task>
 
     <task label="tf-f">
-      <statement correct="no">
+      <statement>
         <p>
           If <m>\grad f(a,b)=\bvec{0}</m>, then <m>f</m> has a local maximum or
           a local minimum at <m>(a,b)</m>.
         </p>
       </statement>
-      <feedback>
-        <p>
-          False. A critical point can be a saddle point. For <m>f(x,y)=x^2-y^2</m>, <m>\grad f(0,0)=\bvec{0}</m>, but <m>(0,0)</m> is a saddle point.
-        </p>
-      </feedback>
+      <choices randomize="no">
+        <choice>
+          <statement><p>True</p></statement>
+          <feedback><p>Incorrect. The statement is false. A critical point can be a saddle point. For <m>f(x,y)=x^2-y^2</m>, <m>\grad f(0,0)=\bvec{0}</m>, but <m>(0,0)</m> is a saddle point.</p></feedback>
+        </choice>
+        <choice correct="yes">
+          <statement><p>False</p></statement>
+          <feedback><p>Correct. A critical point can be a saddle point. For <m>f(x,y)=x^2-y^2</m>, <m>\grad f(0,0)=\bvec{0}</m>, but <m>(0,0)</m> is a saddle point.</p></feedback>
+        </choice>
+      </choices>
     </task>
 
     <task label="tf-g">
-      <statement correct="no">
+      <statement>
         <p>
           If <m>(a,b)</m> is a critical point of <m>f</m>,
           <m>f_{xx}(a,b)&gt;0</m>, and <m>f_{yy}(a,b)&gt;0</m>, then <m>f</m>
           has a local minimum at <m>(a,b)</m>.
         </p>
       </statement>
-      <feedback>
-        <p>
-          False. The test also requires <m>D=f_{xx}f_{yy}-f_{xy}^2&gt;0</m>. For <m>f(x,y)=x^2+4xy+y^2</m>, <m>f_{xx}=f_{yy}=2&gt;0</m>, but <m>D=4-16&lt;0</m>, so <m>(0,0)</m> is a saddle point.
-        </p>
-      </feedback>
+      <choices randomize="no">
+        <choice>
+          <statement><p>True</p></statement>
+          <feedback><p>Incorrect. The statement is false. The test also requires <m>D=f_{xx}f_{yy}-f_{xy}^2&gt;0</m>. For <m>f(x,y)=x^2+4xy+y^2</m>, <m>f_{xx}=f_{yy}=2&gt;0</m>, but <m>D=4-16&lt;0</m>, so <m>(0,0)</m> is a saddle point.</p></feedback>
+        </choice>
+        <choice correct="yes">
+          <statement><p>False</p></statement>
+          <feedback><p>Correct. The test also requires <m>D=f_{xx}f_{yy}-f_{xy}^2&gt;0</m>. For <m>f(x,y)=x^2+4xy+y^2</m>, <m>f_{xx}=f_{yy}=2&gt;0</m>, but <m>D=4-16&lt;0</m>, so <m>(0,0)</m> is a saddle point.</p></feedback>
+        </choice>
+      </choices>
     </task>
 
     <task label="tf-h">
-      <statement correct="yes">
+      <statement>
         <p>
           If <m>f</m> is differentiable and has a local maximum at <m>(a,b)</m>,
           then <m>\grad f(a,b)=\bvec{0}</m>.
         </p>
       </statement>
-      <feedback>
-        <p>
-          True. If <m>f</m> has a local maximum at <m>(a,b)</m>, then <m>g(x)=f(x,b)</m> and <m>h(y)=f(a,y)</m> have local maxima at <m>a</m> and <m>b</m>, so <m>f_x(a,b)=f_y(a,b)=0</m>.
-        </p>
-      </feedback>
+      <choices randomize="no">
+        <choice correct="yes">
+          <statement><p>True</p></statement>
+          <feedback><p>Correct. If <m>f</m> has a local maximum at <m>(a,b)</m>, then <m>g(x)=f(x,b)</m> and <m>h(y)=f(a,y)</m> have local maxima at <m>a</m> and <m>b</m>, so <m>f_x(a,b)=f_y(a,b)=0</m>.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>False</p></statement>
+          <feedback><p>Incorrect. The statement is true. If <m>f</m> has a local maximum at <m>(a,b)</m>, then <m>g(x)=f(x,b)</m> and <m>h(y)=f(a,y)</m> have local maxima at <m>a</m> and <m>b</m>, so <m>f_x(a,b)=f_y(a,b)=0</m>.</p></feedback>
+        </choice>
+      </choices>
     </task>
   </exercise>
 </worksheet>

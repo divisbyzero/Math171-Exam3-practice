@@ -883,10 +883,10 @@ x^2(12-2xy-y^2) \amp = 0\text{.}
 <div class="para">Find the absolute maximum and absolute minimum values of</div>
 <div class="displaymath process-math" id="ex-absolute-extrema-triangle-1-1-1">
 \begin{align*}
-f(x,y) \amp = x^2+y^2-2x-4y
+f(x,y) \amp = x^2+y^2-6x-2y
 \end{align*}
 </div>
-<div class="para">on the closed triangular region with vertices <span class="process-math">\((0,0)\text{,}\)</span> <span class="process-math">\((5,0)\text{,}\)</span> and <span class="process-math">\((0,5)\text{.}\)</span>
+<div class="para">on the closed triangular region with vertices <span class="process-math">\((0,0)\text{,}\)</span> <span class="process-math">\((4,0)\text{,}\)</span> and <span class="process-math">\((4,8)\text{.}\)</span>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-absolute-extrema-triangle-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -900,60 +900,60 @@ f(x,y) \amp = x^2+y^2-2x-4y
 <em class="emphasis">Interior.</em> The first partial derivatives are</div>
 <div class="displaymath process-math" id="ex-absolute-extrema-triangle-2-2-2">
 \begin{align*}
-f_x(x,y) \amp = 2x-2\\
-f_y(x,y) \amp = 2y-4\text{.}
+f_x(x,y) \amp = 2x-6\\
+f_y(x,y) \amp = 2y-2\text{.}
 \end{align*}
 </div>
-<div class="para">Setting both equal to zero gives <span class="process-math">\(x=1\)</span> and <span class="process-math">\(y=2\text{.}\)</span> Since <span class="process-math">\(1+2\lt 5\text{,}\)</span> the critical point <span class="process-math">\((1,2)\)</span> is inside the triangle.</div>
+<div class="para">Setting both equal to zero gives <span class="process-math">\(x=3\)</span> and <span class="process-math">\(y=1\text{.}\)</span> Since <span class="process-math">\(0\lt 3\lt 4\)</span> and <span class="process-math">\(0\lt 1\lt 2(3)\text{,}\)</span> the critical point <span class="process-math">\((3,1)\)</span> is inside the triangle.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-absolute-extrema-triangle-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ex-absolute-extrema-triangle-2-3">
-<em class="emphasis">Bottom side</em> (along <span class="process-math">\(y=0\)</span>). Here <span class="process-math">\(f(x,0)=x^2-2x\text{,}\)</span> whose derivative <span class="process-math">\(2x-2\)</span> is zero at <span class="process-math">\(x=1\text{.}\)</span> This gives the candidate point <span class="process-math">\((1,0)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-absolute-extrema-triangle-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<em class="emphasis">Bottom side</em> (along <span class="process-math">\(y=0\)</span>). Here <span class="process-math">\(f(x,0)=x^2-6x\text{,}\)</span> whose derivative <span class="process-math">\(2x-6\)</span> is zero at <span class="process-math">\(x=3\text{.}\)</span> This gives the candidate point <span class="process-math">\((3,0)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-absolute-extrema-triangle-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ex-absolute-extrema-triangle-2-4">
-<em class="emphasis">Left side</em> (along <span class="process-math">\(x=0\)</span>). Here <span class="process-math">\(f(0,y)=y^2-4y\text{,}\)</span> whose derivative <span class="process-math">\(2y-4\)</span> is zero at <span class="process-math">\(y=2\text{.}\)</span> This gives the candidate point <span class="process-math">\((0,2)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-absolute-extrema-triangle-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<em class="emphasis">Right side</em> (along <span class="process-math">\(x=4\)</span>). Here <span class="process-math">\(f(4,y)=y^2-2y-8\text{,}\)</span> whose derivative <span class="process-math">\(2y-2\)</span> is zero at <span class="process-math">\(y=1\text{.}\)</span> This gives the candidate point <span class="process-math">\((4,1)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-absolute-extrema-triangle-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-absolute-extrema-triangle-2-5">
 <div class="para">
-<em class="emphasis">Hypotenuse</em> (along <span class="process-math">\(y=5-x\)</span>). Here</div>
+<em class="emphasis">Hypotenuse</em> (along <span class="process-math">\(y=2x\)</span>). Here</div>
 <div class="displaymath process-math" id="ex-absolute-extrema-triangle-2-5-3">
 \begin{align*}
-f(x,5-x) \amp = x^2+(5-x)^2-2x-4(5-x)\\
-\amp = 2x^2-8x+5\text{,}
+f(x,2x) \amp = x^2+(2x)^2-6x-2(2x)\\
+\amp = 5x^2-10x\text{,}
 \end{align*}
 </div>
-<div class="para">whose derivative <span class="process-math">\(4x-8\)</span> is zero at <span class="process-math">\(x=2\text{.}\)</span> This gives the candidate point <span class="process-math">\((2,3)\text{.}\)</span>
+<div class="para">whose derivative <span class="process-math">\(10x-10\)</span> is zero at <span class="process-math">\(x=1\text{.}\)</span> This gives the candidate point <span class="process-math">\((1,2)\text{.}\)</span>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-absolute-extrema-triangle-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ex-absolute-extrema-triangle-2-6">
-<em class="emphasis">Corner points.</em> The corners <span class="process-math">\((0,0)\text{,}\)</span> <span class="process-math">\((5,0)\text{,}\)</span> and <span class="process-math">\((0,5)\)</span> are also candidates.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-absolute-extrema-triangle-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<em class="emphasis">Corner points.</em> The corners <span class="process-math">\((0,0)\text{,}\)</span> <span class="process-math">\((4,0)\text{,}\)</span> and <span class="process-math">\((4,8)\)</span> are also candidates.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-absolute-extrema-triangle-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ex-absolute-extrema-triangle-2-7">Evaluating <span class="process-math">\(f\)</span> at every candidate:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-absolute-extrema-triangle-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b1 r0 l0 t0 lines"><span class="process-math">\((x,y)\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\((3,1)\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\((3,0)\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\((4,1)\)</span></td>
 <td class="c m b1 r0 l0 t0 lines"><span class="process-math">\((1,2)\)</span></td>
-<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\((1,0)\)</span></td>
-<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\((0,2)\)</span></td>
-<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\((2,3)\)</span></td>
 <td class="c m b1 r0 l0 t0 lines"><span class="process-math">\((0,0)\)</span></td>
-<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\((5,0)\)</span></td>
-<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\((0,5)\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\((4,0)\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\((4,8)\)</span></td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(f(x,y)\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-10\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-9\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-9\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-5\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-4\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-3\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(15\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-8\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(40\)</span></td>
 </tr>
 </table></div>
-<div class="para" id="ex-absolute-extrema-triangle-2-9">The absolute maximum value is <span class="process-math">\(f(5,0)=15\text{,}\)</span> and the absolute minimum value is <span class="process-math">\(f(1,2)=-5\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-absolute-extrema-triangle-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-absolute-extrema-triangle-2-9">The absolute maximum value is <span class="process-math">\(f(4,8)=40\text{,}\)</span> and the absolute minimum value is <span class="process-math">\(f(3,1)=-10\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-absolute-extrema-triangle-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Solution 1.8.1"><a tabindex="-1" href="#ex-absolute-extrema-triangle-2" title="Copy heading and permalink for Solution 1.8.1" aria-label="Copy heading and permalink for Solution 1.8.1">🔗</a></div>
 </div></details>

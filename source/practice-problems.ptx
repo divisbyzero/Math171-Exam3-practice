@@ -502,6 +502,79 @@
       </p>
     </solution>
   </exercise>
+
+
+  <exercise xml:id="ex-absolute-extrema-triangle" workspace="3in">
+    <statement>
+      <p>
+        Find the absolute maximum and absolute minimum values of
+        <md>
+          <mrow>f(x,y) \amp = x^2+y^2-2x-4y</mrow>
+        </md>
+        on the closed triangular region with vertices <m>(0,0)</m>, <m>(5,0)</m>, and <m>(0,5)</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Since <m>f</m> is continuous and the region is closed and bounded, the Extreme Value Theorem guarantees that <m>f</m> has an absolute maximum and an absolute minimum on the region. We find all candidate points.
+      </p>
+      <p>
+        <em>Interior.</em> The first partial derivatives are
+        <md>
+          <mrow>f_x(x,y) \amp = 2x-2</mrow>
+          <mrow>f_y(x,y) \amp = 2y-4</mrow>
+        </md>.
+        Setting both equal to zero gives <m>x=1</m> and <m>y=2</m>. Since <m>1+2\lt 5</m>, the critical point <m>(1,2)</m> is inside the triangle.
+      </p>
+      <p>
+        <em>Bottom side</em> (along <m>y=0</m>). Here <m>f(x,0)=x^2-2x</m>, whose derivative <m>2x-2</m> is zero at <m>x=1</m>. This gives the candidate point <m>(1,0)</m>.
+      </p>
+      <p>
+        <em>Left side</em> (along <m>x=0</m>). Here <m>f(0,y)=y^2-4y</m>, whose derivative <m>2y-4</m> is zero at <m>y=2</m>. This gives the candidate point <m>(0,2)</m>.
+      </p>
+      <p>
+        <em>Hypotenuse</em> (along <m>y=5-x</m>). Here
+        <md>
+          <mrow>f(x,5-x) \amp = x^2+(5-x)^2-2x-4(5-x)</mrow>
+          <mrow>\amp = 2x^2-8x+5</mrow>
+        </md>,
+        whose derivative <m>4x-8</m> is zero at <m>x=2</m>. This gives the candidate point <m>(2,3)</m>.
+      </p>
+      <p>
+        <em>Corner points.</em> The corners <m>(0,0)</m>, <m>(5,0)</m>, and <m>(0,5)</m> are also candidates.
+      </p>
+      <p>
+        Evaluating <m>f</m> at every candidate:
+      </p>
+      <tabular halign="center">
+        <row bottom="minor">
+          <cell><m>(x,y)</m></cell>
+          <cell><m>(1,2)</m></cell>
+          <cell><m>(1,0)</m></cell>
+          <cell><m>(0,2)</m></cell>
+          <cell><m>(2,3)</m></cell>
+          <cell><m>(0,0)</m></cell>
+          <cell><m>(5,0)</m></cell>
+          <cell><m>(0,5)</m></cell>
+        </row>
+        <row>
+          <cell><m>f(x,y)</m></cell>
+          <cell><m>-5</m></cell>
+          <cell><m>-1</m></cell>
+          <cell><m>-4</m></cell>
+          <cell><m>-3</m></cell>
+          <cell><m>0</m></cell>
+          <cell><m>15</m></cell>
+          <cell><m>5</m></cell>
+        </row>
+      </tabular>
+      <p>
+        The absolute maximum value is <m>f(5,0)=15</m>, and the absolute minimum value is <m>f(1,2)=-5</m>.
+      </p>
+    </solution>
+  </exercise>
+
+
   <exercise xml:id="ex-second-derivative-test">
     <introduction>
       <p>
